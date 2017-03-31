@@ -72,7 +72,7 @@
 	-->
 
 <plugin name="org.apache.cordova.splashscreen"/>
-<plugin name="com.phonegap.plugin.statusbar"/>
+<plugin name="org.apache.cordova.statusbar" spec="0.1.4" source="pgb" />
 
 
 
