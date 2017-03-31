@@ -72,7 +72,7 @@
 	-->
 
 <plugin name="org.apache.cordova.splashscreen"/>
-<plugin name="org.apache.cordova.statusbar" spec="0.1.4" source="pgb" />
+<plugin name="org.apache.cordova.statusbar"/>
 
 
 
