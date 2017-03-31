@@ -7,14 +7,14 @@
         version   = "1.0.3">
 
     <name>CLK Uludağ Mobil İşlemler</name>
-	
+
 
     <description>
         Online Abonelik, Borç Sorgulama, Fatura Ödeme, Tüketim Sorgulama v.b. pek çok işlem
     </description>
 
     <author href="http://www.infopark.com.tr" email="bilgi@infopark.com.tr">
-        Infopark 
+        Infopark
     </author>
 
     <!--
@@ -70,7 +70,6 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
 	-->
-<gap:plugin name="com.phonegap.plugin.statusbar" />
 <gap:plugin name="org.apache.cordova.splashscreen" />
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
@@ -87,16 +86,16 @@
     <icon src="icon-80.png"     gap:platform="blackberry" />
     <icon src="icon-80.png"     gap:platform="blackberry" gap:state="hover"/>
 
-	<icon src="icon.png" gap:platform="ios" /> 
+	<icon src="icon.png" gap:platform="ios" />
     <icon src="icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
     <icon src="icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
-	<icon src="icon-57.png" width="57" height="57" gap:platform="ios" /> 
-	<icon src="icon-57@2x.png" width="114" height="114" gap:platform="ios" /> 
-	<icon src="icon-72.png" width="72" height="72" gap:platform="ios" /> 
-	<icon src="icon-72@2x.png" width="152" height="152" gap:platform="ios" /> 
-	<icon src="icon-76.png" width="76" height="76" gap:platform="ios" /> 
-	<icon src="icon-76@2x.png" width="152" height="152" gap:platform="ios" /> 
-	<icon src="icon-120.png" width="120" height="120" gap:platform="ios" /> 
+	<icon src="icon-57.png" width="57" height="57" gap:platform="ios" />
+	<icon src="icon-57@2x.png" width="114" height="114" gap:platform="ios" />
+	<icon src="icon-72.png" width="72" height="72" gap:platform="ios" />
+	<icon src="icon-72@2x.png" width="152" height="152" gap:platform="ios" />
+	<icon src="icon-76.png" width="76" height="76" gap:platform="ios" />
+	<icon src="icon-76@2x.png" width="152" height="152" gap:platform="ios" />
+	<icon src="icon-120.png" width="120" height="120" gap:platform="ios" />
 	<icon src="icon-152.png" width="152" height="152" gap:platform="ios" />
 
 
