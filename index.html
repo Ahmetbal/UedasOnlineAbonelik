@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -36,12 +32,13 @@
 
 
 
-    <script type="text/javascript">
-
-
-
-
+    <script type="text/javascript" charset="utf-8">
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady() {
+      navigator.splashscreen.show();
+    }
     </script>
+
     <script type="text/javascript">
         $(function () {
             $(".row").click(function () {
@@ -101,11 +98,19 @@
             var kontrol = '0'
             var url = window.location.hostname;
 
-            if (viewwidth < 770 && currentLocation != "/KullaniciGiris.aspx" && kontrol != 'girildi') {
-                'girildi';
-                window.location = '/KullaniciGiris.aspx';
-            }
 
+            if (viewwidth < 770 && currentLocation != "/KullaniciGiris.aspx" && kontrol != 'girildi') {
+                    if (url == 'localhost') {
+                        'girildi';
+                            window.location = "KullaniciGiris.aspx";
+                        } else if (url == '10.116.2.47') {
+                            'girildi';
+                            window.location = "https://10.116.2.47:4040/KullaniciGiris.aspx";
+                        } else {
+                            'girildi';
+                            window.location = "https://online.limakuludag.com.tr/KullaniciGiris.aspx";
+                        }
+                }
 
 
             $('#ContentPlaceHolder1_btnMobilOnayKoduDogrula').attr("disabled", false);
