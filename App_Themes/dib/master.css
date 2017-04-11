@@ -1,0 +1,488 @@
+﻿
+@import url("badger.css");
+
+body {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 11px;
+    color: #222;
+    background: #F1F1F1;
+    /*background: #F1F1F1 url(images/background_alt.jpg) repeat-x center top;*/
+    background-position: 50% 0;
+}
+
+/* Layout */
+
+#container {
+    margin-top: -15px;
+    padding-top: 20px;
+    left: 75px;
+    right: 75px;
+    min-width: 1030px !important;
+    width: 90% !important;
+    margin: 0 8px;
+    /*position: absolute; /*margin: 0 auto; 	min-width: 1006px !important; 	width:85%; 	position: absolute;*/
+}
+
+#modalwrap {
+    width: 98%;
+    padding: 4px;
+}
+
+#header {
+    height: 83px;
+}
+
+#content {
+    background: none repeat-x scroll left bottom #FFFFFF;
+    margin-bottom: 22px;
+    margin-top: -8px;
+    min-height: 200px;
+    padding: 12px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+
+#contentLogin {
+    background: none repeat-x scroll left bottom #FFFFFF;
+    margin-bottom: 22px;
+    margin-top: 70px;
+    min-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    /*border-radius: 5px 5px 5px 5px;*/
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    width: 700px;
+}
+
+#site-name {
+    background: #429BBC url(images/logo.png) 10px center;
+    display: block;
+    height: 140px;
+    margin: 10px 0px 0px 0px;
+    text-indent: -1500px;
+    width: 100%;
+    background-repeat: no-repeat; /*background: #F1F1F1 url(images/background_alt.jpg) repeat-x center top;*/
+}
+
+#logo {
+    margin: 0;
+}
+
+#navigations {
+    margin-top: 7px;
+}
+
+#navigation {
+    margin-top: 10px;
+}
+
+#footer {
+    clear: both;
+    text-align: right;
+    padding: 14px 4px 4px 4px;
+}
+
+
+
+#options {
+    float: right;
+    max-width: 400px;
+    height: 40px;
+    line-height: 35px;
+    text-align: right;
+    /*position: absolute;*/
+    right: 0;
+    margin-top: -50px;
+    background: transparent; /*url("images/btnoverlay.png") repeat-x scroll 0 0 #FFF;*/
+    /*border: 1px solid #FFFFFF;*/
+    /*border-radius: 5px 5px 5px 5px;*/
+    /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);*/
+    color: #fff;
+    text-decoration: none;
+}
+
+    #options a {
+        color: #fff;
+        padding: 4px 10px 4px 20px;
+        line-height: 16px;
+        /*margin: 10px 4px 0px;*/
+        background-color: transparent;
+        background-image: url(images/icons.png);
+        background-repeat: no-repeat;
+        float: left;
+        /*border-right: 1px solid #BBB;*/
+    }
+
+    #options #tema {
+        float: right;
+        margin: 5px;
+        width: 95px;
+    }
+
+#tema .tema1 {
+    float: right;
+    border: none;
+    padding: 10px;
+    background-image: url(images/tema/dar.jpg);
+}
+
+#tema .tema2 {
+    float: right;
+    border: none;
+    padding: 10px;
+    background-image: url(images/tema/genis.jpg);
+}
+
+#help {
+    background-position: left -2px;
+}
+
+#feedback {
+    background-position: left 0px;
+}
+
+#logout {
+    background-position: left -72px;
+}
+
+#key {
+    background-position: left -359px;
+}
+
+#home {
+    background-position: left -48px;
+}
+
+#portal {
+    background-position: left -264px;
+}
+
+#ajanda {
+    background-position: left -24px;
+}
+
+#sinav {
+    background-position: left -407px;
+}
+
+#aciklamalar {
+    background-position: left -214px;
+}
+
+    #aciklamalar.on {
+        background-position: left -192px;
+    }
+
+
+/* End Layout */
+
+
+
+/* Default.aspx Sayfa Düzeni */
+
+/* CALENDER */
+
+.calendar {
+    left: 0;
+    padding: 125px 0 17px;
+    position: relative;
+    top: 0;
+    width: 200px;
+    height: 237px;
+}
+
+.calendar_top {
+    font-size: 13px;
+    height: 146px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+    .calendar_top strong {
+        color: #333;
+        display: block;
+        font-size: 34px;
+        font-weight: normal;
+        padding: 7px 0 0;
+    }
+
+.calendar_bottom {
+    height: 10px;
+    left: 0;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+
+.calendar_middle {
+}
+
+.calendar_data {
+    left: 0;
+    margin-top: -30px;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+
+.cmonth {
+    color: #667F00;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 auto;
+    white-space: nowrap;
+    width: 126px;
+}
+
+.calendar_prev {
+    background: url("layout/site/calendar_prev.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 7px;
+    overflow: hidden;
+    text-indent: -3000px;
+    width: 7px;
+}
+
+.calendar_next {
+    background: url("layout/site/calendar_next.gif") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 7px;
+    overflow: hidden;
+    text-indent: -3000px;
+    width: 7px;
+}
+
+    .calendar_prev:hover, .calendar_next:hover {
+        background-position: 0 -7px;
+    }
+
+.cont {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 184px;
+}
+
+.chead {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 250px;
+}
+
+    .chead li {
+        color: #333;
+        float: left;
+        font-family: Tahoma;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 22px;
+        list-style: none outside none;
+        margin: 0;
+        padding: 0 5px 0 0;
+        text-align: center;
+        width: 22px;
+    }
+
+.cdays {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 190px;
+}
+
+    .cdays li {
+        float: left;
+        height: 22px;
+        list-style: none outside none;
+        margin: 0;
+        padding: 0 5px 5px 0;
+        text-align: center;
+        width: 22px;
+    }
+
+    .cdays a:link, .cdays a:visited, .cdays a:active {
+        background-color: #DF4545;
+        border: 1px solid #BF2323;
+        color: #FFFFFF;
+        display: block;
+        font-family: tahoma;
+        font-size: 10px;
+        font-weight: bold;
+        height: 20px;
+        line-height: 20px;
+        width: 20px;
+    }
+
+    .cdays a:hover {
+        background: none repeat scroll 0 0 #2B3F49;
+        border-color: #AED7E5;
+        text-decoration: none;
+    }
+
+    .cdays a.event:link, .cdays a.event:visited, .cdays a.event:active {
+        background: none repeat scroll 0 0 #8AAD00;
+        border-color: #5C700C;
+    }
+
+    .cdays a.event:hover {
+        background: none repeat scroll 0 0 #92B117;
+        border-color: #C8EA42;
+        color: #FBFF8E;
+    }
+
+    .cdays span {
+        background-color: #EF8D86;
+        border: 1px solid #BF2317;
+        display: block;
+        height: 20px;
+        line-height: 20px;
+        width: 20px;
+    }
+/* End Calender */
+
+
+#sidebar {
+    float: left;
+    text-align: left;
+    width: 240px;
+}
+/*
+#dashboard
+{
+    margin-left: 240px;
+}*/
+
+#kisayol {
+    float: left;
+    min-width: 240px;
+    width: 51%;
+}
+
+#duyuru {
+    float: left;
+    min-width: 240px;
+    width: 49%;
+}
+
+#duyurular {
+    position: relative;
+    height: 350px;
+    display: block;
+    overflow: hidden;
+}
+
+    #duyurular ul {
+        width: 100%;
+    }
+
+        #duyurular ul li {
+            border-bottom: 1px groove #427139;
+            padding: 20px 0px;
+        }
+
+            #duyurular ul li p {
+                font: 13px/1.1em Tahoma,Sans MS,serif;
+                margin: 2px 0px;
+                color: #000000;
+            }
+
+                #duyurular ul li p.header {
+                    color: #427139;
+                    font-weight: bold;
+                }
+
+.box {
+    padding: 10px;
+    border-color: #ccc;
+    margin: 10px;
+}
+
+#kisayollar {
+    position: relative;
+    height: 350px;
+    display: block;
+    overflow: hidden;
+}
+
+.kisayolitem {
+    display: inline-block;
+    text-decoration: none !important;
+    vertical-align: top;
+    width: 85px;
+    height: 85px;
+    margin: 10px 10px 0px;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+    .kisayolitem a {
+        color: #666666;
+    }
+
+a.shortcut {
+    padding: 2px 0px 4px 30px;
+    background: transparent url(images/shortcut.png) no-repeat left center;
+    cursor: pointer;
+    height: 20px;
+    float: right;
+}
+/* End Default.aspx */
+
+
+
+#sessionTimer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 250px;
+    height: 20px;
+    background-color: #C72E30;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.wizardus {
+    width: 100%;
+}
+
+.wizardStep {
+}
+
+.wizardSteps {
+    width: 180px;
+    vertical-align: top;
+}
+
+    .wizardSteps a {
+        display: block;
+        font-size: 15px;
+        height: 16px;
+        margin: 0 10px;
+        padding: 2px;
+    }
+
+        .wizardSteps a:hover {
+        }
+
+
+.ui-widget {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 11px;
+}
+
+#guvenceiadeform .row {
+    margin-bottom: 5px;
+}
+
+#ContentPlaceHolder1_pnlReklam {
+    text-align: center !important;
+}
+

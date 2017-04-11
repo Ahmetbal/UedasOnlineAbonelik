@@ -1,0 +1,137 @@
+﻿table.formsmall
+{
+	background: transparent;
+	width: 100%;
+	border: none;
+	border-bottom: none;
+	/*margin: 4px 0px 4px 5px;*/
+}
+
+table.formsmall tr, table.formsmall td
+{
+	/*background: #fff url(images/fade.png) repeat-x bottom;*/
+	/*background: transparent url(images/fade.png) repeat-x bottom;*/
+	
+}
+
+
+table.formsmall td
+{
+	text-align: left;
+	vertical-align: top;
+	padding-top: 2px;
+}
+	
+table.formsmall td.label
+{
+	font-weight: normal;
+	font-family: Trebuchet MS,Tahoma;
+	font-size: 12px;
+	vertical-align: middle;
+	color: #111;
+	white-space:nowrap;
+	width:10px;
+	padding-right:10px;
+}
+
+table.formsmall td input[type=text], table.formsmall td input[type=password], table.formsmall td select, table.formsmall td textarea
+{
+	font-family: Tahoma;
+	font-size: 11px;
+	border: 1px solid #aaa;
+	padding: 3px 0px;
+	width:95%;
+	min-width:110px;
+	
+}
+
+
+table.formsmall td.buton
+{
+	text-align: center;
+	white-space:nowrap;
+}
+
+table.formsmall td.buton input[type="submit"]
+{
+	font-size:11px;
+	padding: 2px;
+	
+	
+}
+
+table.formsmall input[type=text]:focus, table.formsmall select:focus, table.formsmall textarea:focus
+{
+	background-color: #EAF7B7;
+}
+
+table.formsmall th
+{
+	background: url(images/TablesGrids/bg_th.jpg) repeat-x center right !important;
+	color: #000;
+	font-weight: bold;
+	padding: 4px 7px;
+	margin: 2px 0px 0px;
+	text-align: center;
+	border-right: 1px solid #bbb;
+	font-size: 13px;
+	line-height: 18px; /*line-height: 1.2em;*/
+}
+table.formsmall th a
+{
+	background: url(images/sort.png) no-repeat center right;
+	color: #fff;
+	text-decoration: none !important;
+	font-weight: bold;
+	padding-right: 16px;
+	font-size: 11px;
+}
+
+
+a.butongibilinksmall
+{
+	font-size:11px;
+	padding: 4px;
+	margin:2px 0px 0px;
+}
+
+
+
+.btnOnceki, .btnSonraki
+{
+	vertical-align:top;
+	width:25px;
+}
+
+
+
+
+
+.rspResizeBarHorizontal
+{
+    
+}
+
+.rspCollapseBarHorizontalCollapse
+{
+    background-image : url("images/ackapa.gif") !important;
+    height: 8px !important;
+    line-height: 8px !important;
+    width: 54px !important;
+    background-position : 0px bottom !important;
+}
+
+.rspCollapseBarHorizontalExpand
+{
+    background-image : url("images/ackapa.gif") !important;
+    height: 8px !important;
+    line-height: 8px !important;
+    width: 54px !important;
+    background-position : 0px top !important;
+}
+
+
+
+.ui-widget {
+    -ms-touch-action: none;
+}

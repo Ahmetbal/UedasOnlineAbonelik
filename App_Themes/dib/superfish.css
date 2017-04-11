@@ -1,0 +1,265 @@
+﻿/*** ESSENTIAL STYLES ***/
+#topmenu, #topmenu *
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: tahoma;
+	font-weight: bold;
+	letter-spacing: 0px;
+}
+#topmenu
+{
+	line-height: 1.0;
+	background: transparent url(images/menubackground.png) repeat-x left top;
+	width: 99%;
+	border-left: 1px solid #bbbbbb;
+	border-right: 1px solid #bbbbbb;
+	border-bottom: 1px solid #bbbbbb;
+}
+#topmenu ul
+{
+	position: absolute;
+	top: -999em;
+	width: 16em; /* left offset of submenus need to match (see below) */
+	z-index: 2;
+	border-bottom: 1px solid #bbbbbb;
+}
+#topmenu ul li
+{
+	width: 100%;
+	border-collapse: collapse;
+	color: #f0f0f0 !important;
+	border-right: 1px none #bbbbbb;
+	margin-right: 1px;
+	background: #6bccff none;
+}
+#topmenu li:hover
+{
+	visibility: inherit; /* fixes IE7 'sticky bug' */
+	background: #ddd;
+}
+#topmenu li
+{
+	float: left;
+	position: relative;
+	border-right: 1px solid #BBBBBB;
+}
+#topmenu li ul
+{
+}
+#topmenu a
+{
+	display: block;
+	position: relative;
+}
+#topmenu li:hover ul, #topmenu li.sfHover ul
+{
+	left: 0;
+	top: 2.5em; /* match top ul list item height */
+	z-index: 999999;
+}
+ul#topmenu li:hover li ul, ul#topmenu li.sfHover li ul
+{
+	top: -999em;
+}
+ul#topmenu li li:hover ul, ul#topmenu li li.sfHover ul
+{
+	left: 16em; /* match ul width */
+	top: 0;
+}
+ul#topmenu li li:hover li ul, ul#topmenu li li.sfHover li ul
+{
+	top: -999em;
+}
+ul#topmenu li li li:hover ul, ul#topmenu li li li.sfHover ul
+{
+	left: 16em; /* match ul width */
+	top: 0;
+}
+
+/*** DEMO SKIN ***/
+#topmenu
+{
+	float: left;
+	margin: 0px 3px;
+	margin-bottom:3px;
+	/*margin-left:240px;
+	margin-top:-17px;*/
+}
+#topmenu a
+{
+	padding: .75em 1em;
+	text-decoration: none;
+}
+#topmenu a, #topmenu a:visited
+{
+	/* visited pseudo selector so IE6 applies text colour*/
+	color: #505050;
+}
+#topmenu li
+{
+}
+
+#topmenu li.alt
+{
+    z-index:110;
+}
+
+#topmenu li.ust
+{
+    z-index:109;
+}
+#topmenu li li
+{
+	background: #eee;
+	background-image: none;
+}
+#topmenu li li li
+{
+	background: #9AAEDB;
+}
+
+#topmenu li ul li a, #topmenu li li a:visited
+{
+	background: url("images/menubackground.png") repeat-x scroll left top;
+	color: #333;
+	margin-right: 0px;
+}
+
+#topmenu ul li:hover, #topmenu ul li.sfHover, #topmenu ul li a:hover, #topmenu ul li a:focus, #topmenu ul li a:active
+{
+	background: #ddd;
+	outline: 0;
+}
+
+
+
+/*** arrows **/
+#topmenu a.sf-with-ul
+{
+	padding-right: 22px;
+	min-width: 1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+
+#topmenu ul a.sf-with-ul
+{
+	margin-right: 0px;
+}
+
+#topmenu ul li
+{
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb; /*border-bottom:1px solid #bbb;*/
+}
+
+.sf-sub-indicator
+{
+	position: absolute;
+	display: block;
+	right: .75em;
+	top: 1.05em; /* IE6 only */
+	width: 10px;
+	height: 10px;
+	text-indent: -999em;
+	overflow: hidden;
+	background: url('images/arrows-ffffff.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+a > .sf-sub-indicator
+{
+	/* give all except IE6 the correct values */
+	top: .8em;
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator, a:hover > .sf-sub-indicator, a:active > .sf-sub-indicator, li:hover > a > .sf-sub-indicator, li.sfHover > a > .sf-sub-indicator
+{
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+#topmenu ul .sf-sub-indicator
+{
+	background-position: -10px 0;
+}
+#topmenu ul a > .sf-sub-indicator
+{
+	background-position: 0 0;
+}
+/* apply hovers to modern browsers */
+#topmenu ul a:focus > .sf-sub-indicator, #topmenu ul a:hover > .sf-sub-indicator, #topmenu ul a:active > .sf-sub-indicator, #topmenu ul li:hover > a > .sf-sub-indicator, #topmenu ul li.sfHover > a > .sf-sub-indicator
+{
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+/*** shadows for all but IE6 ***/
+#topmenu ul
+{
+	/*background:	url('images/shadow.png') no-repeat bottom right;*/
+	padding: 0 1px 0 0;
+	-moz-border-radius-bottomleft: 17px;
+	-moz-border-radius-topright: 17px;
+	-webkit-border-top-right-radius: 17px;
+	-webkit-border-bottom-left-radius: 17px;
+}
+#topmenu ul.sf-shadow-off
+{
+	background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** arrows (for all except IE7) **/
+#topmenu .sf-with-ul {
+	padding-right: 2.5em;
+	*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+    color: black;
+}
+/* styling for both css and generated arrows */
+#topmenu .sf-with-ul:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	margin-top: -3px;
+	height: 0;
+	width: 0;
+	/* order of following 3 rules important for fallbacks to work */
+	border: 5px solid transparent;
+	border-top-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-top-color: rgba(0,0,0,.5);
+}
+#topmenu > li > .sf-with-ul:focus:after,
+#topmenu > li:hover > .sf-with-ul:after,
+#topmenu > .sfHover > .sf-with-ul:after {
+	border-top-color: white; /* IE8 fallback colour */
+}
+/* styling for right-facing arrows */
+#topmenu ul .sf-with-ul:after {
+	margin-top: -5px;
+	margin-right: -3px;
+	border-color: transparent;
+	border-left-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+	border-left-color: rgba(0,0,0,.5);
+}
+#topmenu ul li > .sf-with-ul:focus:after,
+#topmenu ul li:hover > .sf-with-ul:after,
+#topmenu ul .sfHover > .sf-with-ul:after {
+	border-left-color: white;
+}

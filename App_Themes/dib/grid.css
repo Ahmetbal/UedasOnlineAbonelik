@@ -1,0 +1,490 @@
+﻿/* Grid */
+
+table.grid {
+    border-collapse: collapse;
+    background: #fff;
+    width: 100%;
+    border: 1px solid #bbb;
+    line-height: 1.5;
+}
+
+    table.grid th {
+        /*background: url(images/TablesGrids/bg_th.jpg) no-repeat bottom right;*/
+        color: #fff;
+        font-weight: bold;
+        padding: 4px 7px;
+        margin: 2px 0px 0px;
+        text-align: left;
+        border-right: 1px solid #bbb;
+        font-size: 13px;
+        line-height: 1.2em;
+        vertical-align: middle;
+    }
+
+    table.grid tbody tr td {
+        background: #fff url(images/TablesGrids/bg_td1.jpg) repeat-x top;
+    }
+
+    table.grid tbody tr.odd td {
+        background: #FFF8E8 url(images/TablesGrids/bg_td2.jpg) repeat-x;
+    }
+
+    table.grid tbody tr.selected td {
+        background: #FFF8E8 url(images/TablesGrids/bg_td3.jpg) repeat-x;
+    }
+
+    table.grid tbody tr.pages td {
+        text-align: center;
+        border: 0 none;
+        font-size: 14px;
+        font-weight: bold;
+        background: #FFF8E8 url(images/TablesGrids/bg_td3.jpg) repeat-x;
+        height: 36px;
+        vertical-align: middle;
+    }
+
+    table.grid tbody tr.pages table {
+        margin: 0 auto;
+    }
+
+        table.grid tbody tr.pages table tr td {
+            padding: 0 4px 0 0;
+        }
+
+    table.grid tbody tr.pages a {
+        padding: 2px 4px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+    }
+
+    table.grid tbody tr.empty td {
+        background: #FFF8E8 url(images/TablesGrids/bg_td2.jpg) repeat-x;
+        text-align: center;
+        font-size: 13px;
+        color: #BF2F2F;
+    }
+
+    table.grid td {
+        padding: 4px 7px;
+        border-top: 1px solid #bbb;
+        border-right: 1px solid #DDDDDD;
+        text-align: left;
+        vertical-align: top;
+        font-size: 11px;
+    }
+
+    table.grid tfoot th {
+        background: url(images/TablesGrids/bg_total.jpg) repeat-x bottom;
+        color: #FFFFFF;
+        height: 30px;
+    }
+
+    table.grid tfoot td {
+        background: url(images/TablesGrids/bg_total.jpg) repeat-x bottom;
+        color: #FFFFFF;
+        height: 30px;
+    }
+
+
+
+    table.grid tbody th.sum, table.grid td.sum, table.grid tr.sum {
+        line-height: 1.4em;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 4px 7px;
+        border-top: 2px solid #FFCA5E;
+        border-right: 1px solid #DDDDDD;
+        text-align: right;
+        
+    }
+
+    table.grid tr th {
+        background: url(images/TablesGrids/bg_th.jpg) repeat-x center right !important;
+        color: #555555 !important;
+        font-weight: normal;
+        padding: 4px 7px;
+        margin: 2px 0px 0px;
+        vertical-align: middle;
+        text-align: left;
+        border: 1px solid #c4d6dc;
+        font-size: 12px;
+    }
+
+        table.grid tr th a {
+            color: #555555 !important;
+        }
+
+    table.grid tr {
+        background-image: none !important;
+        border: none;
+    }
+
+        table.grid tr td {
+            background-image: url(images/TablesGrids/bg_td2.jpg);
+            background-position: left top;
+            background-repeat: repeat-x;
+            background-color: #ffffff;
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+            border-top: 1px solid #dddddd;
+            vertical-align: middle;
+            color: #666666;
+            min-height: 25px !important;
+        }
+
+        table.grid tr.odd td {
+            background: #fefefe url(images/TablesGrids/bg_td1.jpg) repeat-x top;
+            background-image: url(images/TablesGrids/bg_td1.jpg);
+            border-style: none;
+            border-right: 1px solid #dddddd;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        table.grid tr.empty {
+            background-image: url(images/TablesGrids/bg_td2.jpg);
+            background-position: left top;
+            background-repeat: repeat-x;
+            background-color: #ffffff;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 13px;
+            color: #BF2F2F;
+        }
+
+
+    table.grid td {
+        padding: 4px 7px;
+        border-top: 1px none #bbb;
+        border-right: 1px dotted #cccccc;
+        text-align: left;
+        vertical-align: top;
+        font-size: 11px;
+    }
+
+
+    table.grid tr td table td {
+        border: none;
+    }
+
+
+    table.grid tbody tr:hover td {
+        background: #FFF8E8 url(images/TablesGrids/bg_td3.jpg) repeat-x;
+    }
+
+/*Grid Butonları*/
+
+.grd_Asagi {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -529px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Yukari {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -504px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Kabul {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -528px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Ekle {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -455px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Cikar, .grd_Sil {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -455px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Hesapla {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/calculator.png) no-repeat left;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Goruntule {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -406px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Guncelle {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -285px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Planla {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/chart_organisation.png) no-repeat left center;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Bilgi {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/information.png) no-repeat left center;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Bosalt {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/delete.png) no-repeat left center;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Toplanti {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/group.png) no-repeat left center;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Uyeler {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/user_suit.png) no-repeat left center;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Personeller {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/vcard.png) no-repeat left center;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Sil {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -380px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Takvim {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -237px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.gridViewToolTip {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/page_white_text.png) no-repeat left center;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+
+.uyariToolTip {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -142px;
+    cursor: help;
+    display: block;
+    height: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    line-height: 17px;
+}
+
+
+.SifirBosluk {
+    padding: 0px !important;
+    background: none;
+    margin: 0px !important;
+}
+
+.grd_Sinavlar {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/page_white_text.png) no-repeat left center;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Sec {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -455px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Unlem {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -142px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Onayla {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -116px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Iptal {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -95px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Ekle {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -455px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_PersGoruntule {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -455px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Yazdir {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/printer.png) no-repeat left center;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Kaydet {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/bullet_disk.png) no-repeat left center;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Detay {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -454px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+.grd_Pasif {
+    padding: 4px 0px 4px 20px;
+    background: transparent url(images/icons.png) no-repeat left -455px;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    white-space: nowrap;
+}
+
+/* End Grid */
+
+/*tr.pager table tr td {
+    background-color: black !important;
+    border: 5px solid #666666 !important;
+    margin: 0px !important;
+}*/
+
+.pager span {
+    border-width: 0;
+    padding: 2px 6px;
+    border: solid 1px #ccc;
+    font-weight: bold;
+    color: white;
+    background-color: #c00;
+    line-height: 12px;
+    cursor: default;
+    margin-right: 0px;
+}
+
+.pager a {
+    color: red;
+    text-decoration: none;
+    padding: 2px 6px;
+}
+
+    .pager a:hover {
+        color: Red;
+        border-width: 0;
+        text-decoration: none;
+    }
+
+/* Gorunmez Tablo */
+table.GorunmezTablo, table.GorunmezTablo tr.GorunmezTablo, table.GorunmezTablo tr.GorunmezTablo td.GorunmezTablo, table.GorunmezTablo tr, table.GorunmezTablo tr td {
+    border: 0 none !important;
+    width: 1px;
+    padding: 0px !important;
+    margin: 0px;
+    background: none !important;
+}
+
+table.grid tr td.UsteAl {
+    padding-top: 10px;
+    vertical-align: top !important;
+}

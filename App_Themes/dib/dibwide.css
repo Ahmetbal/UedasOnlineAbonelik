@@ -1,0 +1,25 @@
+﻿@import url("common.css");
+@import url("grid.css");
+@import url("superfish.css");
+@import url("ui/ui.css");		/*jquery ui*/
+@import url("ui/ui.dropdownchecklist.css");		/*jquery ui.dropdownchecklist*/
+@import url("master.css");
+@import url("jqueryplugins.css");
+@import url("left.css");
+@import url("ui/ui.datetimepicker.css");		/*jquery ui.datetimepicker*/
+@import url("jquerymultiselect/jquery.multiselect.css");
+@import url("jquerymultiselect/jquery.multiselect.filter.css");
+
+#container
+{
+	left: 10px;
+	right: 10px;
+	width: 98% !important;
+	
+	position: absolute;
+	
+	/*margin: 0 auto;
+	min-width: 1006px !important;
+	width:85%;
+	position: absolute;*/
+}

@@ -1,0 +1,250 @@
+﻿@import url("ui/ui.css"); /*jquery ui*/
+@import url("ui/ui.dropdownchecklist.css"); /*jquery ui.dropdownchecklist*/
+@import url("ui/ui.datetimepicker.css"); /*jquery ui.datetimepicker*/
+/*
+@import url("common.css");
+@import url("grid.css");
+@import url("superfish.css");
+
+@import url("master.css");
+@import url("jqueryplugins.css");
+@import url("left.css");
+@import url("badger.css");
+@import url("badger.css");
+@import url("jquerymultiselect/jquery.multiselect.cs");
+@import url("jquerymultiselect/jquery.multiselect.filter.css");
+
+*/
+
+.IsletmeTxt {
+    width: 50px;
+}
+
+.navbar-default {
+    background-color: #43AC34;
+    background-color: #68A9AC;
+    background-image: linear-gradient(45deg,#68AC70 0,#3B7A5A 100%);
+    border-color: #2C6933;
+}
+
+    .navbar-default .navbar-brand {
+        color: #ffffff;
+    }
+
+        .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+            color: #ffffff;
+            background-color: transparent;
+        }
+
+    .navbar-default .navbar-text {
+        color: #ffffff;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        color: #ffffff;
+    }
+
+        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+            color: #ffffff;
+            background-color: #273271;
+        }
+
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+        color: #ffffff;
+        background-color: #2C6933;
+    }
+
+    .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
+        color: #cccccc;
+        background-color: transparent;
+    }
+
+    .navbar-default .navbar-toggle {
+
+    }
+
+        .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+            background-color: #273271;
+        }
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #ffffff;
+        }
+
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        border-color: #2C6933;
+    }
+
+    .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+        background-color: #2C6933;
+        color: #ffffff;
+    }
+
+@media (max-width:767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ffffff;
+    }
+
+        .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+            color: #ffffff;
+            background-color: #2C6933;
+        }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ffffff;
+        background-color: #2C6933;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #cccccc;
+        background-color: transparent;
+    }
+}
+
+div.form div.row {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 6px;
+}
+
+label {
+    font-weight: normal;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 55px;
+    background-color: #f5f5f5;
+    font-size: 90%;
+}
+
+body > .container {
+    padding: 60px 15px 0;
+}
+
+.container .text-muted {
+    margin: 7px 0;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.iban .form-control {
+    display: inline;
+}
+
+label {
+    margin-left: 4px;
+    margin-right: 6px;
+}
+/*******Steps*******/
+
+
+.stepwizard-step p {
+    margin-top: 10px;
+}
+
+.stepwizard-row {
+    display: table-row;
+}
+
+.stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-index: 0;
+}
+
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+
+.ui-widget-header {
+    color: #333;
+}
+
+
+.ui-dialog .ui-dialog-titlebar {
+    color: #fff;
+}
+
+.ui-dialog {
+    box-shadow: 0 0 39px #cccccc;
+}
+
+
+#ContentPlaceHolder1_UcDogumTarihi_txtTarih {
+    z-index: 9999999999 !important;
+}
+
+#ContentPlaceHolder1_UCCaptcha_txtCaptchaText {
+    z-index: 0 !important;
+}
+
+/*responsive stacktable */
+.stack-table.large-only {
+    display: table;
+}
+
+.stack-table.small-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .stack-table.large-only {
+        display: none;
+    }
+
+    .stack-table.small-only {
+        display: table;
+    }
+
+    #eyt {
+        display: none;
+    }
+}

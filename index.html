@@ -1,3 +1,1366 @@
-<script>
-location.href = "https://online.limakuludag.com.tr/";
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Online Abonelik İşlemleri
+</title><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="UTF-8">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.position.js"></script>
+    <script type="text/javascript" src="js/jquery.plugins.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.dropdownchecklist.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.datepicker-tr.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedInput.js"></script>
+    <script type="text/javascript" src="js/jquery.password.strength.js"></script>
+    <script type="text/javascript" src="js/jquery.scroller.js"></script>
+    <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+    <script type="text/javascript" src="js/badger.js"></script>
+    <script type="text/javascript" src="js/superfish.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/teleriktreeview.js"></script>
+    <!--script type="text/javascript" src="/js/ZeroClipboard.js"></!--script -->
+    <script type="text/javascript" src="js/stacktable.js"></script>
+    <script type="text/javascript" src="js/flot/jquery.flot.min.js"></script>
+    <script type="text/javascript" src="js/flot/jquery.flot.time.js"></script>
+    <script type="text/javascript" src="js/flot/date.js"></script>
+    <script type="text/javascript" src="js/flot/jquery.flot.axislabels.js"></script>
+    <script type="text/javascript" src="js/flot/jquery.flot.orderBars.js"></script>
+    <script type="text/javascript" src="js/slideout.min.js"></script>
+
+
+
+    <script type="text/javascript">
+
+
+
+
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(".row").click(function () {
+
+                if ($('#menuayar').val() == 1) {
+                    $("#acilirmenu").removeClass("in");
+                    $('#menuayar').val('0');
+                }
+            });
+
+            $("#menuayarbutton").click(function () {
+
+                if ($('#menuayar').val() == 0) {
+                    $('#menuayar').val('1');
+                } else {
+                    $('#menuayar').val('0');
+                }
+            });
+
+
+
+
+            $('table.stack-table').stacktable();
+            $('#table.stack-table').stacktable({ myClass: 'small-only' });
+
+            $(".solMenu").each(function () {
+                var href = $(this).attr("href");
+                if (href == window.location.pathname) {
+                    $(this).addClass("active");
+                }
+            });
+        });
+
+    </script>
+    <script type="text/javascript">
+        $(function () {
+
+            var viewwidth;
+
+            // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+
+            if (typeof window.innerWidth != 'undefined') {
+                viewwidth = window.innerWidth
+
+            }
+                // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+            else if (typeof document.documentElement != 'undefined'
+                && typeof document.documentElement.clientWidth !=
+                'undefined' && document.documentElement.clientWidth != 0) {
+                viewportwidth = document.documentElement.clientWidth
+            }
+                // older versions of IE
+            else {
+                viewportwidth = document.getElementsByTagName('body')[0].clientWidth
+            }
+            var currentLocation = window.location.pathname;
+            var kontrol = '0'
+            var url = window.location.hostname;
+
+            if (viewwidth < 770 && currentLocation != "/KullaniciGiris.aspx" && kontrol != 'girildi') {
+                'girildi';
+                window.location = '/KullaniciGiris.aspx';
+            }
+
+
+
+            $('#ContentPlaceHolder1_btnMobilOnayKoduDogrula').attr("disabled", false);
+            var sec = parseInt($('#hfGeriSayim').val());
+            var msg = "Belirtilen süre içerisinde giriş yapılmadıgı için tekrar onay kodu göndermelisiniz.";
+            var timer = setInterval(function () {
+                $('#geriSayim span').text(sec--);
+                if (sec == -1) {
+
+                    $('#ContentPlaceHolder1_btnMobilOnayKoduDogrula').attr("disabled", true);
+                    $('#geriSayim').text(msg);
+                    clearInterval(timer);
+
+                }
+            }, 1000);
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#aFaturaTalebi').click(function () {
+
+                if ($('#girisyapildimi').val() != 1) {
+                    $('#aFaturaTalebi').attr("href", "/KullaniciGiris.aspx");
+                    $('#aFaturaTalebi').attr("target", "");
+                }
+                else {
+                    $('#aFaturaTalebi').attr("href", "http://www.clkbogazici.com/sayfa.asp?mdl=form&param=iletisim&durum=basvuru");
+                    $('#aFaturaTalebi').attr("target", "_blank");
+                }
+            });
+        });
+    </script>
+
+    <link href="App_Themes/dib/bootstrap.min.css" rel="stylesheet" /><link href="App_Themes/dib/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" /><link href="App_Themes/dib/dib.css" rel="stylesheet" /><link href="App_Themes/dib/mobil.css" rel="stylesheet" />
+
+    <script>
+        // add new options with default values
+        $.ui.dialog.prototype.options.clickOut = false;
+        $.ui.dialog.prototype.options.responsive = true;
+        $.ui.dialog.prototype.options.scaleH = 0.8;
+        $.ui.dialog.prototype.options.scaleW = 0.8;
+        $.ui.dialog.prototype.options.showTitleBar = true;
+        $.ui.dialog.prototype.options.showCloseButton = true;
+
+
+        // extend _init
+        var _init = $.ui.dialog.prototype._init;
+        $.ui.dialog.prototype._init = function () {
+            var self = this;
+
+            // apply original arguments
+            _init.apply(this, arguments);
+
+            //patch
+            //$.ui.dialog.overlay.events = $.map('focus,keydown,keypress'.split(','), function (event) {
+            //return event + '.dialog-overlay';
+            //}).join(' ');
+
+        };
+        // end _init
+
+
+        // extend open function
+        var _open = $.ui.dialog.prototype.open;
+        $.ui.dialog.prototype.open = function () {
+            var self = this;
+
+            // apply original arguments
+            _open.apply(this, arguments);
+
+            // get dialog original size on open
+            var oHeight = self.element.parent().outerHeight(),
+                oWidth = self.element.parent().outerWidth(),
+                isTouch = $("html").hasClass("touch");
+
+            // responsive width & height
+            var resize = function () {
+
+                //check if responsive
+                // dependent on modernizr for device detection / html.touch
+                if (self.options.responsive === true || (self.options.responsive === "touch" && isTouch)) {
+                    var elem = self.element,
+                        wHeight = $(window).height(),
+                        wWidth = $(window).width(),
+                        dHeight = elem.parent().outerHeight(),
+                        dWidth = elem.parent().outerWidth(),
+                        setHeight = Math.min(wHeight * self.options.scaleH, oHeight),
+                        setWidth = Math.min(wWidth * self.options.scaleW, oWidth);
+
+                    if ((oHeight + 100) > wHeight || elem.hasClass("resizedH")) {
+                        elem.dialog("option", "height", setHeight).parent().css("max-height", setHeight);
+                        elem.addClass("resizedH");
+                    }
+                    if ((oWidth + 100) > wWidth || elem.hasClass("resizedW")) {
+                        elem.dialog("option", "width", setWidth).parent().css("max-width", setWidth);
+                        elem.addClass("resizedW");
+                    }
+
+                    // only recenter & add overflow if dialog has been resized
+                    if (elem.hasClass("resizedH") || elem.hasClass("resizedW")) {
+                        elem.dialog("option", "position", "center");
+                        elem.css("overflow", "auto");
+                    }
+                }
+
+                // add webkit scrolling to all dialogs for touch devices
+                if (isTouch) {
+                    elem.css("-webkit-overflow-scrolling", "touch");
+                }
+            };
+
+            // call resize()
+            resize();
+
+            // resize on window resize
+            $(window).on("resize", function () {
+                resize();
+            });
+
+            // resize on orientation change
+            window.addEventListener("orientationchange", function () {
+                resize();
+            });
+
+            // hide titlebar
+            if (!self.options.showTitleBar) {
+                self.uiDialogTitlebar.css({
+                    "height": 0,
+                    "padding": 0,
+                    "background": "none",
+                    "border": 0
+                });
+                self.uiDialogTitlebar.find(".ui-dialog-title").css("display", "none");
+            }
+
+            //hide close button
+            if (!self.options.showCloseButton) {
+                self.uiDialogTitlebar.find(".ui-dialog-titlebar-close").css("display", "none");
+            }
+
+            // close on clickOut
+            if (self.options.clickOut && !self.options.modal) {
+                // use transparent div - simplest approach (rework)
+                $('<div id="dialog-overlay"></div>').insertBefore(self.element.parent());
+                $('#dialog-overlay').css({
+                    "position": "fixed",
+                    "top": 0,
+                    "right": 0,
+                    "bottom": 0,
+                    "left": 0,
+                    "background-color": "transparent"
+                });
+                $('#dialog-overlay').click(function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    self.close();
+                });
+                // else close on modal click
+            } else if (self.options.clickOut && self.options.modal) {
+                $('.ui-widget-overlay').click(function (e) {
+                    self.close();
+                });
+            }
+
+            // add dialogClass to overlay
+            if (self.options.dialogClass) {
+                $('.ui-widget-overlay').addClass(self.options.dialogClass);
+            }
+        };
+
+        //end open
+
+
+        // extend close function
+        var _close = $.ui.dialog.prototype.close;
+        $.ui.dialog.prototype.close = function () {
+            var self = this;
+            // apply original arguments
+            _close.apply(this, arguments);
+
+            // remove dialogClass to overlay
+            if (self.options.dialogClass) {
+                $('.ui-widget-overlay').removeClass(self.options.dialogClass);
+            }
+            //remove clickOut overlay
+            if ($("#dialog-overlay").length) {
+                $("#dialog-overlay").remove();
+            }
+        };
+        //end close
+
+        //tooltip
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+
+    </script>
+
+    <style type="text/css">
+
+
+        .navbar-brand {
+            float: left;
+            height: 60px;
+            padding: 15px 15px;
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        @media (max-width:768px) {
+            a.navbar-brand {
+                background: transparent url(images/upesaslogo.png) no-repeat left center;
+                    padding-left: 149px;
+                    margin-top: -5px;
+                    margin-left: -12px;
+                    background-size: 120px 38px;
+            }
+
+            #ContentPlaceHolder1_faturasorgugif{
+                display: none;
+            }
+        }
+
+
+        @media (min-width:769px) {
+            a.navbar-brand {
+            background: transparent url(images/upesaslogo.png) no-repeat left center;
+            padding-left: 230px;
+            }
+
+            #ContentPlaceHolder1_faturasorgugif{
+                display: normal;
+            }
+        }
+
+
+
+        #ulNavBarCollapseDiv {
+            margin-right: 0px !important;
+        }
+
+        .solMenu {
+            border-bottom: 1px dashed #337ab7;
+        }
+
+        .ui-dialog {
+            display: none;
+        }
+
+
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+ /* min-height: 100vh;*/
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+}
+
+.slideout-menu-left {
+  left: 0;
+  max-width: 240px;
+  height: auto;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+
+.slideout-panel {
+        position: relative;
+        z-index: 1;
+        will-change: transform;
+        background-color: #FFF; /* A background-color is required */
+		margin-top:-15px;
+		padding-top: 20px;
+    }
+
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
+#yanMenu{
+    margin: 45px 0 10px 0px;
+    padding: 5px 5px 27px 15px;
+    width: 96%;
+	z-index: 0;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3dbcca+0,00b8c9+0,1fb8c6+19,70c2c9+44,73c1c6+44,b7dfe8+78 */
+background: rgb(61,188,202); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(61,188,202,1) 0%, rgba(0,184,201,1) 0%, rgba(31,184,198,1) 19%, rgba(112,194,201,1) 44%, rgba(115,193,198,1) 44%, rgba(183,223,232,1) 78%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(61,188,202,1) 0%,rgba(0,184,201,1) 0%,rgba(31,184,198,1) 19%,rgba(112,194,201,1) 44%,rgba(115,193,198,1) 44%,rgba(183,223,232,1) 78%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(61,188,202,1) 0%,rgba(0,184,201,1) 0%,rgba(31,184,198,1) 19%,rgba(112,194,201,1) 44%,rgba(115,193,198,1) 44%,rgba(183,223,232,1) 78%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dbcca', endColorstr='#b7dfe8',GradientType=1 ); /* IE6-9 */
+}
+
+
+#yanMenu::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.navbar-nav>li>a{
+    color: #fdfdfd;
+}
+
+
+.navbar-nav>li>a:hover{
+    color: #273271;
+}
+    </style>
+
+</head>
+
+
+
+
+
+<div id="uedasanalytics">
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-67500441-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</div>
+
+
+
+
+
+<body>
+    <form method="post" action="./" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJLTk5MDA1MjMxDxYCHghiS2lvc2tNdWgWAmYPDxYCHwBoZBYEAgMPFgIeB1Zpc2libGVoZAIHD2QWCgICDw8WAh4EVGV4dGVkZAIFD2QWAmYPFgIeBGhyZWYFKmh0dHBzOi8vZXl0LmNsa3VsdWRhZy5jb20udHIvWVRTTG9naW4uYXNweGQCDA8WAh8BaGQCDg9kFhpmDxYCHwFoZAIDDxYCHwFoZAIED2QWAgIDDw8WAh8BaGRkAgUPFgIfAWcWCgIBDxYCHwMFNi9PQUt1bGxhbmljaUFib25lL0F2YW50YWpsaUlzbGVtbGVyLmFzcHg/dGFyaWZlPW1lc2tlbmQCAw8WAh8DBTYvT0FLdWxsYW5pY2lBYm9uZS9BdmFudGFqbGlJc2xlbWxlci5hc3B4P3RhcmlmZT1pc3llcmlkAgUPFgIfAwU2L09BS3VsbGFuaWNpQWJvbmUvQXZhbnRhamxpSXNsZW1sZXIuYXNweD90YXJpZmU9c2FuYXlpZAIHDxYCHwFoZAIJDxYCHwFoZAIGDxYCHwFnZAIHDxYCHwFnZAIKDxYCHwFnZAILDxYCHwFnZAIMDxYCHwFnZAINDxYCHwFnZAIODxYCHwFnZAIPDxYCHwFnZAIQDxYCHwFnZAIPDxYCHwMFDHRlbDo0NDQgNjY0NhYCAgEPFgIfAgUINDQ0IDY2NDZkZB2XEObuQkTVAOtL45h3U0jJZrYb1UuIkMWSFM1vLLzx" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
 </script>
+
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__PREVIOUSPAGE" id="__PREVIOUSPAGE" value="d5cfGEp9RHMLbKG6WUEciX0_98D5fPPBr5TYO6cr9s_hKtR1t5vB0q_dP4hNTU1NYZP5RA4EC__EsW3lh-tDLy773bkdpduusShv1h6o-Q01" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAA1zHvuiSEYeU5EBW6WeybsitHdzt1bRr2xxafeoz5jlrh2ElUSLU1urU3VMc0qWdolukdXiBtp0UQ6gfTw2tdeao+y3sZ7WRftgYFQ0JY3NKvWLgYTJuJzKSK56RLQuqOlmT16ixCAzmjDVhOsdsaYJ6Ix/gcyAFWKED0oUQF2HUZ78j8kA5DIadBDT9tfjjwW58TagWBYq8ruwqBTsi6LOBcchBKfxDztNxNR2f/x+FN+/UNJuhqnxEXbkB54LqF8KE8YKne70azVsvMFqjeKX+rSjMig8ZDfT21/JinXb2V3NX7UPnzVGmRQy/vyiry4=" />
+</div>
+
+        <input type="hidden" id="menuayar" value="0" />
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation"
+            style="background-color: #3dbcca; background-image: none; border: none;">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <script>
+
+                        $(window).load(function () {
+                            if (14 == 14) {
+                                document.querySelector('.js-slideout-toggle').addEventListener('click', function () {
+                                    $('#yanMenu').removeClass("hidden");
+                                    slideout.toggle();
+                                });
+
+                                $('.js-slideout-toggle').attr('data-target','');
+                                var slideout = new Slideout({
+                                    'panel': document.getElementById('container'),
+                                    'menu': document.getElementById('yanMenu'),
+                                    'padding': 256,
+                                    'tolerance': 70
+                                });
+
+
+
+                                slideout.on('beforeopen', function() {
+                                    $('#yanMenu').removeClass("hidden");
+                                });
+
+
+
+                            }else {
+                                $('#yanMenu').hide();
+                                }
+                        });
+
+                        $(window).bind('beforeunload', function () {
+                            $('#yanMenu').hide();
+                        });
+
+                        $(document).ready(function () {
+                            if ($('#girisyapildimi').val() == 1) {
+                                gecmisurl = document.referrer.match(/\/\/.*?\/(.*?)\/?(\?.*)?$/)[1];
+                                suankiurl = location.pathname;
+                                if (gecmisurl == "KullaniciGiris.aspx") {
+                                    $('#geributonu').css('display:', 'none');
+                                } else {
+                                    $('#geributonu').css('display:', 'normal');
+                                }
+                            }
+
+                            else if (document.referrer != "") {
+                                if (document.referrer.match(/\/\/.*?\/(.*?)\/?(\?.*)?$/)[1] == "" || document.referrer.match(/\/\/.*?\/(.*?)\/?(\?.*)?$/)[1] == "KullaniciGiris.aspx") {
+                                    $('#geributonu').css('display:', 'none');
+                                } else {
+                                    $('#geributonu').css('display:', 'normal');
+                                }
+
+                            }
+
+
+
+                        });
+
+                        function geri() {
+                            if ($('#girisyapildimi').val() == 1) {
+                                gecmisurl = document.referrer.match(/\/\/.*?\/(.*?)\/?(\?.*)?$/)[1];
+                                if (gecmisurl != "KullaniciGiris.aspx") {
+                                    $('#geributonu').css('display:', 'normal');
+                                    window.history.back();
+                                } else {
+                                    $('#geributonu').css('display:', 'none');
+                                }
+                            } else {
+                                window.history.back();
+                            }
+
+                        }
+
+
+                    </script>
+
+
+
+                    <input name="ctl00$girisyapildimi" type="hidden" id="girisyapildimi" value="0" />
+
+                    <span class="visible-xs" style="cursor: pointer; margin-bottom: 5px;" onclick="geri();">
+                        <i id="geributonu" class="fa fa-arrow-left" style="font-size: 28px; color: white; margin: 14px 0 0 0; float: left;" data-placement="bottom" title="Geri"></i>
+                    </span>
+
+                    <button id="menuayarbutton" type="button" class="navbar-toggle collapsed js-slideout-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="float: left !important; margin-left: 6px;">
+                        <span class="sr-only">Menu aç/kapa</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="/">
+                        <span class="hidden-xs">Online  İşlem Merkezi</span>
+                    </a>
+                    <span id="lblOrtamBilgisi" style="background-color:Red;font-size:Smaller;font-weight:bold;"></span>
+
+
+                    <a href='/KullaniciGiris.aspx' onclick=''>
+                        <span class="visible-xs"><i class="fa fa-user" style="font-size: 28px; color: white; margin: 14px 8px 0 0; float: right;" data-placement="bottom" title="İşlem Merkezi"></i></span>
+                    </a>
+
+
+
+
+
+                </div>
+                <div class="collapse navbar-collapse" id="acilirmenu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/Default.aspx'><i class="fa fa-home"></i>&nbsp;Ana Sayfa</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/Tahsilat/FaturaTahsilat.aspx'><i class="fa fa-credit-card"></i>&nbsp;Fatura Öde</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href="/Fatura/Sorgu.aspx"><i class="fa fa-search-plus"></i>&nbsp;Borç Sorgula</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/Basvuru/AbonelikBasvuru.aspx'><i class="fa fa-user-plus"></i>&nbsp;Abone Ol</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/Tahliye/TahliyeBasvuru.aspx'><i class="fa fa-scissors"></i>&nbsp;Abonelik İptal Et</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/Tahliye/GuvenceIadeBasvuru.aspx'><i class="fa fa-money"></i>&nbsp;Depozito İadesi İste</a> </li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/Tahliye/GuvenceIadeSorgulama.aspx'><i class="fa fa-search"></i>&nbsp;Depozito Alacağı Sorgulama</a> </li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/BilgiGuncelleme/AboneBilgiGuncelleme.aspx'><i class="fa fa-pencil-square-o"></i>&nbsp;Bilgi Güncelle</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href="/OAKullaniciAbone/SerbestTuketiciIslemler.aspx"><i class="fa fa-try"></i>&nbsp;İndirimli Enerji Al</a></li>
+                            <li id="DigerIslemler1" class="hidden-lg hidden-md hidden-sm"><a href='#' onclick="$('#digerislemler').click();"><i class="fa fa-arrow-right"></i>&nbsp;Diğer İşlemler</a></li>
+                            <li id="YardimKonulari1" class="hidden-lg hidden-md hidden-sm"><a href='#' onclick="$('#yardimkonulari').click();"><i class="fa fa-info-circle"></i>&nbsp;Yardım Konuları</a></li>
+                            <li id="liGiris"><a href='/KullaniciGiris.aspx'><i class="fa fa-sign-in"></i>&nbsp; Müşteri Girişi</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/OAKullaniciAbone/OAMusteriBilgiDegistirme.aspx'><i class="fa fa-cogs"></i>&nbsp;Hesap Ayarları</a> </li>
+                            <li id="eyt"><a href="https://eyt.clkuludag.com.tr/YTSLogin.aspx" id="eytadres"><i class="fa fa-sign-in"></i>&nbsp; EYT Girişi</a></li>
+
+
+                        </ul>
+
+
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <script>
+
+            var currentLocation = window.location.pathname;
+            var url = window.location.hostname;
+
+            if (currentLocation != "/") {
+                $('#DigerIslemler1').hide();
+                $('#YardimKonulari1').hide();
+            } else {
+                $('#DigerIslemler1').show();
+                $('#YardimKonulari1').show();
+            }
+
+
+        </script>
+
+
+        <div class="container" style="margin-top: 70px;">
+
+
+
+
+
+
+            <nav id="yanMenu" class="hidden" style="" >
+                        <ul class="nav navbar-nav navbar-right style-1">
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/Default.aspx'><i class="fa fa-home"></i>&nbsp;Ana Sayfa</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/Tahsilat/FaturaTahsilat.aspx'><i class="fa fa-credit-card"></i>&nbsp;Fatura Öde</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href="/Fatura/Sorgu.aspx"><i class="fa fa-search-plus"></i>&nbsp;Borç Sorgula</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/Basvuru/AbonelikBasvuru.aspx'><i class="fa fa-user-plus"></i>&nbsp;Abone Ol</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/Tahliye/TahliyeBasvuru.aspx'><i class="fa fa-scissors"></i>&nbsp;Abonelik İptal Et</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/Tahliye/GuvenceIadeBasvuru.aspx'><i class="fa fa-money"></i>&nbsp;Güvence Bedeli İade İste</a> </li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/Tahliye/GuvenceIadeSorgulama.aspx'><i class="fa fa-search"></i>&nbsp;Güvence Bedeli Sorgula</a> </li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/BilgiGuncelleme/AboneBilgiGuncelleme.aspx'><i class="fa fa-pencil-square-o"></i>&nbsp;Bilgi Güncelle</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href="/OAKullaniciAbone/SerbestTuketiciIslemler.aspx"><i class="fa fa-try"></i>&nbsp;İndirimli Enerji Al</a></li>
+                            <li id="Li1" class="hidden-lg hidden-md hidden-sm"><a href='#' onclick="$('#digerislemler').click();"><i class="fa fa-arrow-right"></i>&nbsp;Diğer İşlemler</a></li>
+                            <li id="Li2" class="hidden-lg hidden-md hidden-sm"><a href='#' onclick="$('#yardimkonulari').click();"><i class="fa fa-info-circle"></i>&nbsp;Yardım Konuları</a></li>
+                            <li id="li3"><a href='/KullaniciGiris.aspx'><i class="fa fa-sign-in"></i>&nbsp; Müşteri Girişi</a></li>
+                            <li class="hidden-lg hidden-md hidden-sm"><a href='/OAKullaniciAbone/OAMusteriBilgiDegistirme.aspx'><i class="fa fa-cogs"></i>&nbsp;Hesap Ayarları</a> </li>
+                            <li id="Li4"><a id="A1"><i class="fa fa-sign-in"></i>&nbsp; EYT Girişi</a></li>
+
+
+                        </ul>
+                    </nav>
+
+            <div class="row">
+                <div class="col-md-3 hidden-xs hidden-sm panel panel-default" style="padding: 8px;">
+
+                    <div id="websiteyazi" style="margin-bottom: 3px; margin-top: -10px;">
+                        <h5 style="color: #273271; margin-bottom: 2px;"><b>Hoş geldiniz !
+                            <br />
+                            Size nasıl yardımcı olabiliriz ? </b></h5>
+                    </div>
+
+
+                    <ul class="nav nav-pills nav-stacked" style="z-index: 9999999999;">
+                        <li id="liIndirimliEnerji" class="solMenu"><a href='/OAKullaniciAbone/SerbestTuketiciIslemler.aspx'><i class="fa fa-try"></i>&nbsp;İndirimli Enerji Al</a> </li>
+
+                        <li class="solMenu"><a href='/Default.aspx'><i class="fa fa-home"></i>&nbsp;Ana Sayfa</a> </li>
+                        <li class="solMenu"><a href='/Tahsilat/FaturaTahsilat.aspx'><i class="fa fa-credit-card"></i>&nbsp;Fatura Öde</a></li>
+                        <li class="solMenu"><a href="/Fatura/Sorgu.aspx"><i class="fa fa-search-plus"></i>&nbsp;Borç Sorgula</a></li>
+                        <li class="solMenu" id="aboneol"><a id="aboneollink" href='/Basvuru/AbonelikBasvuru.aspx'><i class="fa fa-globe"></i>&nbsp;Abone Ol</a></li>
+
+                        <li class="solMenu"><a href='/BilgiGuncelleme/AboneBilgiGuncelleme.aspx'><i class="fa fa-pencil-square-o"></i>&nbsp;Bilgi Güncelle</a></li>
+
+                        <li class="solMenu"><a href='/Tahliye/TahliyeBasvuru.aspx'><i class="fa fa-scissors"></i>&nbsp;Abonelik İptal Et</a></li>
+                        <li class="solMenu"><a href='/Tahliye/GuvenceIadeBasvuru.aspx'><i class="fa fa-money"></i>&nbsp;Güvence Bedeli İade İste</a> </li>
+                        <li class="solMenu"><a href='/Tahliye/GuvenceIadeSorgulama.aspx'><i class="fa fa-search"></i>&nbsp;Güvence Bedeli Sorgula</a> </li>
+                        <li class="solMenu"><a href='/Basvuru/Basvurularim.aspx'><i class="fa fa-user-plus"></i>&nbsp;Başvuru Sorgula</a></li>
+                        <li class="solMenu"><a href='/Sayac/SayactanAboneBul.aspx'><i class="fa fa-clock-o"></i>&nbsp;Sayaç Bilgileri ile Sorgula</a> </li>
+
+                        <li class="solMenu"><a href='/Fatura/TuketimGrafigi.aspx'><i class="fa fa-bar-chart"></i>&nbsp;Tüketim Grafiğim</a> </li>
+
+                        <li class="solMenu"><a href='/OAKullaniciAbone/OAMusteriBilgiDegistirme.aspx'><i class="fa fa-pencil-square-o"></i>&nbsp;Hesap Ayarlarım</a> </li>
+                        <li class="solMenu"><a href='/OAKullaniciAbone/OAKullaniciAbone.aspx'><i class="fa fa-users fa"></i>&nbsp;Müşteri Girişi</a> </li>
+
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-9" id="container">
+
+
+
+
+
+
+
+    <img src="images/MobilAppBannerUedas.jpg" id="ContentPlaceHolder1_websiteuedas" style="width: 100%;" alt="websitebanner" usemap="#" />
+
+    <input name="ctl00$ContentPlaceHolder1$linkstyle" type="hidden" id="ContentPlaceHolder1_linkstyle" value="False" />
+
+    <map name="websitebannermap" id="websitebannermap">
+        <area id="link1" shape="rect" coords="675,197,752,224" href="https://appsto.re/tr/gkT98.i" target="_blank" alt="Apple" title="Apple">
+        <area id="link2" shape="rect" coords="676,228,753,255" href="https://play.google.com/store/apps/details?id=com.infopark.onlineabonelik" target="_blank" alt="Android" title="Android">
+    </map>
+
+
+
+
+
+
+
+    <div id="mobilyazi">
+        <center><h5 style="color:#273271; margin-bottom: 2px; margin-top: 5px;"><b>Hoş geldiniz! Size nasıl yardımcı olabiliriz?</b> </h5></center>
+    </div>
+
+
+    <div id="ContentPlaceHolder1_anasayfabutonlar">
+        <div class="row" style="margin-top: -8px; padding: 10px;">
+            <div class="col-md-3" style="padding: 3px 0 0 0;">
+                <a class="btn button" href="/OAKullaniciAbone/SerbestTuketiciIslemler.aspx"><i class="fa fa-try" style="color: #1DACFB;"></i>&nbsp;İndirimli Enerji Al</a>
+            </div>
+            <div class="col-md-3" style="padding: 3px 0 0 0;">
+                <a class="btn button" href="/Tahsilat/FaturaTahsilat.aspx"><i class="fa fa-credit-card" style="color: #1DACFB;"></i>&nbsp;Fatura Öde</a>
+            </div>
+            <div class="col-md-3" style="padding: 3px 0 0 0;">
+                <a class="btn button" href="/Fatura/Sorgu.aspx"><i class="fa fa-search-plus" style="color: #1DACFB;"></i>&nbsp;Borç Sorgula</a>
+            </div>
+            <div class="col-md-3" style="padding: 3px 0 0 0;">
+                <a class="btn button" href="/Basvuru/AbonelikBasvuru.aspx"><i class="fa fa-user-plus" style="color: #1DACFB;"></i>&nbsp;Abone Ol</a>
+            </div>
+
+        </div>
+        <div class="row" style="margin-bottom: 5px; margin-top: -20px; padding: 10px;">
+            <div class="col-md-3" style="padding: 3px 0 0 0;">
+                <a class="btn button" href="/Tahliye/GuvenceIadeBasvuru.aspx"><i class="fa fa-money" style="color: #1DACFB;"></i>&nbsp;Güvence Bedeli İade İste</a>
+            </div>
+            <div class="col-md-3" style="padding: 3px 0 0 0;">
+                <a class="btn button" href="/BilgiGuncelleme/AboneBilgiGuncelleme.aspx"><i class="fa fa-pencil-square-o" style="color: #1DACFB;"></i>&nbsp;Bilgi Güncelle</a>
+            </div>
+            <div class="col-md-3" style="padding: 3px 0 0 0;">
+                <a class="btn button" href="/Tahliye/TahliyeBasvuru.aspx"><i class="fa fa-scissors" style="color: #1DACFB;"></i>&nbsp;Abonelik İptal Et</a>
+            </div>
+
+            <div class="col-md-3" style="padding: 3px 0 0 0;">
+
+
+                <a id="ContentPlaceHolder1_musterigirisbuton" class="btn button" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$musterigirisbuton&quot;, &quot;&quot;, false, &quot;&quot;, &quot;KullaniciGiris.aspx&quot;, false, true))">
+                <i class="fa fa-user" style="color: #1DACFB;"></i>&nbsp;Müşteri Girişi
+                </a>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="row" style="padding: 10px;">
+
+        <div id="ContentPlaceHolder1_divSerbestTuketici" class="col-md-6" style="padding: 5px 0 0 5px;">
+            <div class="panel-group" id="accordion3">
+                <div class="panel btn-custom" style="border: none;">
+                    <div class="panel-heading" style="max-height: 34px; padding-top: 7px;">
+                        <a style="cursor: pointer; color: #293C6D;" data-toggle="collapse" data-parent="#accordion3" data-target="#collapseThree" data-collapse-group="myDivs">
+                            <i style="color: #1DACFB;" class="fa fa-caret-right"></i>&nbsp;Avantajlı Tarife İşlemleri
+                        </a>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse in">
+                        <div class="panel-body" style="padding: 0; font-weight: normal;">
+                            <ul class="list-group" style="margin-bottom: 0;">
+
+                                <li class="list-group-item"><a href="/OAKullaniciAbone/AvantajliIslemler.aspx?tarife=mesken" id="ContentPlaceHolder1_aAvantajliTarifelerMesken"><i class="fa fa-arrow-right"></i>&nbsp;Avantajlı Tarifeler: Mesken</a></li>
+                                <li class="list-group-item"><a href="/OAKullaniciAbone/AvantajliIslemler.aspx?tarife=isyeri" id="ContentPlaceHolder1_aAvantajliTarifelerEsnaf"><i class="fa fa-arrow-right"></i>&nbsp;Avantajlı Tarifeler: Esnaf</a></li>
+                                <li class="list-group-item"><a href="/OAKullaniciAbone/AvantajliIslemler.aspx?tarife=sanayi" id="ContentPlaceHolder1_aAvantajliTarifelerSanayi"><i class="fa fa-arrow-right"></i>&nbsp;Avantajlı Tarifeler: Sanayi</a></li>
+
+
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6" id="mobildigerislemler" style="padding: 5px 0 0 5px;">
+            <div class="panel-group" id="accordion2">
+                <div class="panel btn-custom" style="border: none;">
+                    <a id="digerislemler" style="cursor: pointer; color: #293C6D;" data-toggle="collapse" data-parent="#accordion2" data-target="#collapseTwo" data-collapse-group="myDivs">
+                        <div class="panel-heading" style="max-height: 34px; padding-top: 7px;">
+                            <i class="fa fa-caret-right" style="font-size: 14px; color: #1DACFB;"></i>&nbsp;Diğer İşlemler
+                        </div>
+                    </a>
+
+                    <div id="collapseTwo" class="panel-collapse collapse in">
+                        <div class="panel-body" style="padding: 0; background-color: #fff; font-weight: normal;">
+                            <ul class="list-group" style="margin-bottom: 0;">
+                                <li class="list-group-item"><a href="/Basvuru/Basvurularim.aspx"><i class="fa fa-user"></i>&nbsp;Başvuru Sorgula</a></li>
+                                <li class="list-group-item"><a href="/Sayac/SayactanAboneBul.aspx"><i class="fa fa-clock-o"></i>&nbsp;Sayaç Bilgileri ile Sorgula</a></li>
+                                <li class="list-group-item" style="display: none;"><a href="http://www.clkbogazici.com/sayfa.asp?mdl=form&param=iletisim&durum=basvuru  " id="ContentPlaceHolder1_liFaturaTalebi" target="_blank"><i class="fa fa-mail-forward"></i>&nbsp;Fatura Talebi</a></li>
+                                <li class="list-group-item"><a href="/Fatura/TuketimGrafigi.aspx"><i class="fa fa-bar-chart"></i>&nbsp;Tüketim Grafiğim</a></li>
+                                <li class="list-group-item"><a href="/MobilBilgiServisi/MobilBilgiServisi.aspx"><i class="fa fa-mobile"></i>&nbsp;Mobil Bilgi Servisi</a></li>
+                                <li class="list-group-item"><a href="Iletisim.aspx" id="ContentPlaceHolder1_liIletisimFormu"><i class="fa fa-phone"></i>&nbsp;İletişim Bilgileri</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6" id="yardimsecenekleri" style="padding: 5px 0 0 5px;">
+            <div class="panel-group" id="accordion4">
+                <div class="panel btn-custom" style="border: none;">
+                    <a id="yardimkonulari" style="cursor: pointer; color: #293C6D;" data-toggle="collapse" data-parent="#accordion4" data-target="#collapseFour" data-collapse-group="myDivs">
+                        <div class="panel-heading" style="max-height: 34px; padding-top: 7px;">
+                            <i class="fa fa-caret-right" style="font-size: 14px; color: #1DACFB;"></i>&nbsp;Yardım Konuları
+                        </div>
+                    </a>
+
+                    <div id="collapseFour" class="panel-collapse collapse in">
+                        <div class="panel-body" style="padding: 0; border: none !important; font-weight: normal;">
+                            <ul class="list-group" style="margin-bottom: 0;">
+
+
+                                <li id="ContentPlaceHolder1_liBireyselAbonelik" class="list-group-item"><a href="/Yardim/BireyselAbonelikYardim.aspx"><i class="fa fa-arrow-right"></i>&nbsp;Nasıl Abone Olurum?</a></li>
+                                <li id="ContentPlaceHolder1_liAbonelikBilgiYardim" class="list-group-item"><a href="/Yardim/AboneBilgiGuncelleme.aspx"><i class="fa fa-arrow-right"></i>&nbsp;Bilgilerimi Nasıl Güncellerim?</a></li>
+                                <li id="ContentPlaceHolder1_liAboneBorcGoruntulemeYardim" class="list-group-item"><a href="/Yardim/BorcGoruntulemeYardim.aspx"><i class="fa fa-arrow-right"></i>&nbsp;Borcumu Nasıl Sorgularım?</a></li>
+                                <li id="ContentPlaceHolder1_liAbonelikIptalYardim" class="list-group-item"><a href="/Yardim/TahliyeBasvuruYardim.aspx"><i class="fa fa-arrow-right"></i>&nbsp;Aboneliğimi Nasıl İptal Ederim?</a></li>
+                                <li id="ContentPlaceHolder1_liGuvenceIadeYardim" class="list-group-item"><a href="/Yardim/GuvenceIadeYardim.aspx"><i class="fa fa-arrow-right"></i>&nbsp;Depozitomu Nasıl Alabilirim?</a></li>
+                                <li id="ContentPlaceHolder1_liSayacAboneSorgulamaYardim" class="list-group-item"><a href="/Yardim/SayacAboneSorgulamaYardim.aspx"><i class="fa fa-arrow-right"></i>&nbsp;Sayaç Bilgileri İle Nasıl Sorgularım?</a></li>
+                                <li id="ContentPlaceHolder1_liSorulanSorular" class="list-group-item" style="display: none;"><a target="_blank" href="http://www.bepsas.com.tr/sayfa.asp?mdl=sayfalar&id=156"><i class="fa fa-arrow-right"></i>&nbsp;Sıkça Sorulan Sorular</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="row">
+
+
+        <div class="col-md-4"></div>
+    </div>
+    <div class="hidden-xs">
+
+    </div>
+
+
+
+    <script>
+        $(document).ready(function () {
+            if ($('#ContentPlaceHolder1_linkstyle').val() == 'True') {
+                $('#websitebannermap').css('cursor','default');
+                document.getElementById("websitebannermap").setAttribute("onclick", "return false;");
+            }
+
+
+            var colno, pid;
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            var t = 0;
+            var l = 0;
+            var scrollbars = 1;
+            var modal = 'yes';
+
+            if (14 == "14") {
+                var mesken = "http://clkuludag.com.tr/indirimli-elektrik-konut";
+                var esnaf = "http://clkuludag.com.tr/indirimli-elektrik-esnaf";
+                var sanayi = "http://clkuludag.com.tr/indirimli-elektrik-sanayi";
+            }else {
+                var mesken = "http://www.bepsas.com.tr/sayfa.asp?mdl=tarifeler&id=1";
+                var esnaf = "http://www.bepsas.com.tr/sayfa.asp?mdl=tarifeler&id=2";
+                var sanayi = "http://www.bepsas.com.tr/sayfa.asp?mdl=tarifeler&id=3";
+            }
+
+
+            $('#ContentPlaceHolder1_aAvantajliTarifelerMesken').click(function () {
+                var sayfa = "";
+                sayfa = window.open(mesken + '', '', "width=" + w + ",height=" + h + ",left=" + l + ",top=" + t + ',scrollbars=' + scrollbars + 'modal' + modal);
+                sayfa.focus();
+                return false;
+            });
+
+
+            $('#ContentPlaceHolder1_aAvantajliTarifelerEsnaf').click(function () {
+                var sayfa = "";
+                sayfa = window.open(esnaf + '', '', "width=" + w + ",height=" + h + ",left=" + l + ",top=" + t + ',scrollbars=' + scrollbars + 'modal' + modal);
+                sayfa.focus();
+                return false;
+            });
+
+
+            $('#ContentPlaceHolder1_aAvantajliTarifelerSanayi').click(function () {
+                var sayfa = "";
+                sayfa = window.open(sanayi + '', '', "width=" + w + ",height=" + h + ",left=" + l + ",top=" + t + ',scrollbars=' + scrollbars + 'modal' + modal);
+                sayfa.focus();
+                return false;
+            });
+
+            $('#ContentPlaceHolder1_aTeklifIste').click(function () {
+                var sayfa = "";
+                sayfa = window.open("http://www.clkbogazici.com/sayfa.asp?mdl=form&param=ucuz&durum=basvuru" + '', '', "width=" + w + ",height=" + h + ",left=" + l + ",top=" + t + ',scrollbars=' + scrollbars + 'modal' + modal);
+                sayfa.focus();
+                return false;
+            });
+
+            $('#ContentPlaceHolder1_aSerbestTuketici').click(function () {
+                var sayfa = "";
+                sayfa = window.open("http://www.clkbogazici.com/sayfa.asp?mdl=sayfalar&id=148" + '', '', "width=" + w + ",height=" + h + ",left=" + l + ",top=" + t + ',scrollbars=' + scrollbars + 'modal' + modal);
+                sayfa.focus();
+                return false;
+            });
+
+
+
+        });
+
+
+
+        $('.panel-group').on('show.bs.collapse', function () {
+            var i = $(this).parent().find('.fa-caret-down')
+            //i.toggleClass('fa-caret-down fa-caret-right');
+            i.removeClass('fa-caret-down').addClass('fa-caret-right');
+
+            var $target = $('html,body');
+            $target.animate({ scrollTop: $target.height() / (3 / 2) }, 1000);
+        }).on('hide.bs.collapse', function () {
+            var i = $(this).parent().find('.fa-caret-right')
+            //i.toggleClass('fa-caret-right fa-caret-down');
+            i.removeClass('fa-caret-right').addClass('fa-caret-down');
+        });
+
+
+        if (window.innerWidth < 480) {
+            $('#collapseTwo').removeClass("in");
+            $('#collapseThree').removeClass("in");
+            $('#collapseFour').removeClass("in");
+        } else {
+            $('#collapseOne').addClass("in");
+            $('#collapseTwo').addClass("in");
+            $('#collapseThree').addClass("in");
+            $('#collapseFour').addClass("in");
+        }
+
+        window.onresize = function (event) {
+            if (window.innerWidth < 480) {
+                $('#collapseTwo').removeClass("in");
+                $('#collapseThree').removeClass("in");
+                $('#collapseFour').removeClass("in");
+            } else {
+                $('#collapseOne').addClass("in");
+                $('#collapseTwo').addClass("in");
+                $('#collapseThree').addClass("in");
+                $('#collapseFour').addClass("in");
+            }
+        };
+
+        $("[data-collapse-group='myDivs']").click(function () {
+            if (window.innerWidth < 480) {
+                var $this = $(this);
+                $("[data-collapse-group='myDivs']:not([data-target='" + $this.data("target") + "'])").each(function () {
+                    $($(this).data("target")).removeClass("in").addClass('collapse');
+                });
+
+
+            }
+
+        });
+
+
+
+
+
+
+    </script>
+
+
+
+
+    <script type="text/javascript">
+
+
+        if (14 == "14") {
+
+            //$('#website').hide();
+            //$('#websiteuedas').show();
+            if (window.innerWidth < 480) {
+                $('#anasayfaicerik').css('display','normal');
+
+                //$('#websiteuedas').hide();
+            }else {
+                $('#anasayfaicerik').css('display','none');
+                $('#ContentPlaceHolder1_anasayfabutonlar').css('display','none');
+            }
+        }else{
+            //$('#website').show();
+            //$('#websiteuedas').hide();
+
+        }
+
+
+        $( window ).resize(function() {
+            if (14 == "14") {
+
+                if (window.innerWidth < 480) {
+                    $('#anasayfaicerik').css('display','normal');
+                    $('#websiteuedas').hide();
+                }else {
+                    $('#anasayfaicerik').css('display','none');
+                }
+            }
+        });
+
+
+    </script>
+
+
+
+    <style>
+        .modal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .modal-dialog {
+            position: fixed;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: 2px solid #3c7dcf;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .modal-header {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 50px;
+            padding: 10px;
+            background: #6598d9;
+            border: 0;
+        }
+
+        .modal-title {
+            font-weight: 300;
+            font-size: 2em;
+            color: #fff;
+            line-height: 30px;
+        }
+
+        .modal-body {
+            position: absolute;
+            top: 50px;
+            bottom: 60px;
+            width: 100%;
+            font-weight: 300;
+            overflow: auto;
+        }
+
+        .modal-footer {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 60px;
+            padding: 10px;
+            background: #f1f3f5;
+        }
+
+
+        @media (max-width:600px) {
+            .btn {
+                margin: 3px 0 3px 0;
+            }
+
+            #butonlar {
+                text-align: center;
+            }
+
+            #accordion4, #accordion2 {
+                margin-top: -15px;
+            }
+
+            #ContentPlaceHolder1_website, #websiteyazi, #websitemusterigirisi {
+                display: none;
+            }
+
+            #mobildigerislemler {
+                display: normal;
+                padding: 0 !important;
+                margin-top: -20px !important;
+            }
+
+            #yardimsecenekleri {
+                display: normal;
+                padding: 0 !important;
+            }
+
+
+            .button {
+                height: 34px;
+                width: 100%;
+                font-weight: bold;
+                display: inline-block;
+                padding: 4px 12px;
+                margin-bottom: 0;
+                font-size: 14px;
+                line-height: 20px;
+                color: #273271;
+                text-align: left;
+                vertical-align: middle;
+                cursor: pointer;
+                background-color: #f5f5f5;
+                background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+                background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+                background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+                background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+                background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+                background-repeat: repeat-x;
+                border: 1px solid #cccccc;
+                border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+                border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+                border-bottom-color: #b3b3b3;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+                filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+                -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+                -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+            }
+
+
+
+
+
+            .btn-custom {
+                font-weight: bold;
+                background-color: #f5f5f5;
+                background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+                background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+                background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+                background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+                background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+                background-repeat: repeat-x;
+                border: 1px solid #cccccc !important;
+                border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+                border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+                border-bottom-color: #b3b3b3;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+                filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+                -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+                -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+                text-align: left;
+                width: 100%;
+            }
+        }
+
+
+        @media (min-width:605px) {
+            #ContentPlaceHolder1_mobil, #mobilyazi, #mobilmusterigiris, #mobildigerislemler {
+                display: none;
+            }
+
+            #ContentPlaceHolder1_website, #ContentPlaceHolder1_websiteuedas {
+                margin-top: 0 !important;
+            }
+        }
+
+
+
+        .btn-custom {
+            font-weight: bold;
+            background-color: #f5f5f5;
+            background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+            background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+            background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+            background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+            background-repeat: repeat-x;
+            border: 1px solid #cccccc !important;
+            border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            border-bottom-color: #b3b3b3;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            text-align: left;
+            min-width: 171px;
+        }
+
+
+        .btn-custom2 {
+            background-color: hsl(201, 100%, 48%) !important;
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5bc5ff", endColorstr="#009ff4");
+            background-image: -khtml-gradient(linear, left top, left bottom, from(#5bc5ff), to(#009ff4));
+            background-image: -moz-linear-gradient(top, #5bc5ff, #009ff4);
+            background-image: -ms-linear-gradient(top, #5bc5ff, #009ff4);
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5bc5ff), color-stop(100%, #009ff4));
+            background-image: -webkit-linear-gradient(top, #5bc5ff, #009ff4);
+            background-image: -o-linear-gradient(top, #5bc5ff, #009ff4);
+            background-image: linear-gradient(#5bc5ff, #009ff4);
+            border-color: #009ff4 #009ff4 hsl(201, 100%, 43%);
+            color: #fff !important;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
+            -webkit-font-smoothing: antialiased;
+            text-align: left;
+            width: 100%;
+            margin: 3px 0 3px 0;
+        }
+
+
+
+        .button {
+            height: 34px;
+            min-width: 98%;
+            font-weight: bold;
+            display: inline-block;
+            padding: 4px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            line-height: 20px;
+            color: #273271;
+            text-align: left;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+            vertical-align: middle;
+            cursor: pointer;
+            background-color: #f5f5f5;
+            background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+            background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+            background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+            background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+            background-repeat: repeat-x;
+            border: 1px solid #cccccc;
+            border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            border-bottom-color: #b3b3b3;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .list-group > li {
+            border-left: none;
+            border-right: none;
+        }
+
+        .panel-group .panel-heading + .panel-collapse > .panel-body {
+            border-top: none;
+        }
+
+        #ContentPlaceHolder1_liSayacAboneSorgulamaYardim {
+            margin-bottom: 0;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border-bottom: #ccc 1px solid;
+        }
+    </style>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="footer" style="background-color: #56CD63; color: white; position: fixed !important; max-height: 30px;">
+            <div class="container">
+                <p class="text-muted text-center" style="color: white; vertical-align: middle;">
+                    <a href="tel:444 6646" id="ltTelefon" style="color: white;" class="preventLoading"><i class="fa fa-phone"></i>&nbsp;
+                        444 6646</a> | <a style="color: white;" href="/" title="Ana Sayfa">Online İşlem Merkezi</a> &copy; 2015
+                </p>
+            </div>
+        </div>
+
+        <input type="hidden" name="ctl00$hdnEvet" id="hdnEvet" />
+        <input type="hidden" name="ctl00$hdnHayir" id="hdnHayir" />
+        <input type="hidden" name="ctl00$hdnIptal" id="hdnIptal" />
+        <input type="hidden" name="ctl00$hdnUrl" id="hdnUrl" />
+        <input type="hidden" name="ctl00$hdnBagliOrtaklik" id="hdnBagliOrtaklik" value="14" />
+        <input type="hidden" name="ctl00$tabDegisHV" id="tabDegisHV" value="0" />
+        <input type="hidden" name="ctl00$accordionDegisHV" id="accordionDegisHV" value="0" />
+        <input type="hidden" name="ctl00$wizardStepDegisHV" id="wizardStepDegisHV" value="0" />
+        <input type="hidden" name="ctl00$hfGeriSayim" id="hfGeriSayim" value="180" />
+        <div id="dialogContainer">
+        </div>
+        <div id="loading" style="width: 100%; height: 100%; background-color: #fff; opacity: 0.8; z-index: 99999; padding-top: 200px; text-align: center; font-size: 20px; position: fixed; top: 0; left: 0;">
+            <div style="padding-left: 20px; padding-top: 25px;"><i class="fa fa-cog  fa-spin "></i>&nbsp;İşleminiz devam ediyor.. Lütfen Bekleyiniz...</div>
+        </div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+
+
+//]]>
+</script>
+</form>
+
+
+
+
+</body>
+</html>
+<meta http-equiv='refresh' content='1800;url=/Default.aspx'>

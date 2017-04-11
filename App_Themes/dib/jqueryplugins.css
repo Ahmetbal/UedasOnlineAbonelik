@@ -1,0 +1,442 @@
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	overflow: hidden;
+}
+#cboxOverlay
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+#cboxMiddleLeft, #cboxBottomLeft
+{
+	clear: left;
+}
+#cboxContent
+{
+	position: relative;
+}
+#cboxLoadedContent
+{
+	overflow: auto;
+}
+#cboxTitle
+{
+	margin: 0;
+}
+#cboxLoadingOverlay, #cboxLoadingGraphic
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow
+{
+	cursor: pointer;
+}
+.cboxPhoto
+{
+	float: left;
+	margin: auto;
+	border: 0;
+	display: block;
+}
+.cboxIframe
+{
+	width: 100%;
+	height: 100%;
+	display: block;
+	border: 0;
+}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay
+{
+	background: #000;
+}
+#colorbox
+{
+}
+#cboxContent
+{
+	margin-top: 20px;
+}
+#cboxError
+{
+	padding: 50px;
+	border: 1px solid #ccc;
+}
+#cboxLoadedContent
+{
+	border: 5px solid #000;
+	background: #fff;
+}
+#cboxTitle
+{
+	position: absolute;
+	top: -20px;
+	left: 0;
+	color: #ccc;
+}
+#cboxCurrent
+{
+	position: absolute;
+	top: -20px;
+	right: 0px;
+	color: #ccc;
+}
+#cboxSlideshow
+{
+	position: absolute;
+	top: -20px;
+	right: 90px;
+	color: #fff;
+}
+#cboxPrevious
+{
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	margin-top: -32px;
+	background: url(images/controls.png) no-repeat top left;
+	width: 28px;
+	height: 65px;
+	text-indent: -9999px;
+}
+#cboxPrevious.hover
+{
+	background-position: bottom left;
+}
+#cboxNext
+{
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	margin-top: -32px;
+	background: url(images/controls.png) no-repeat top right;
+	width: 28px;
+	height: 65px;
+	text-indent: -9999px;
+}
+#cboxNext.hover
+{
+	background-position: bottom right;
+}
+#cboxLoadingOverlay
+{
+	background: #000;
+}
+#cboxLoadingGraphic
+{
+	background: url(images/loading.gif) no-repeat center center;
+}
+#cboxClose
+{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	display: block;
+	background: url(images/controls.png) no-repeat top center;
+	width: 38px;
+	height: 19px;
+	text-indent: -9999px;
+}
+#cboxClose.hover
+{
+	background-position: bottom center;
+}
+
+/* End Color Box */
+
+
+
+
+
+/* Auto Complete */
+
+
+
+.autoCompleteBox
+{
+	border: 1px solid #c0c0c0;
+	width: 190px;
+	background: #fff;
+	white-space: nowrap;
+	height: 22px;
+}
+
+.autoCompleteBoxLeft
+{
+	float: left;
+	height: 21px;
+	background: #fff;
+	border: 0 none !important;
+}
+
+.autoComplete
+{
+	border: none !important;
+	width: 100%;
+}
+
+.autoCompleteBoxPopUp
+{
+	float: left;
+	height: 21px;
+	border: 0 none !important;
+}
+
+.autoCompleteBoxClear
+{
+	float: right;
+	height: 21px;
+	border: none;
+}
+
+
+
+.btn_Clear
+{
+	background: transparent url(images/icons.png) no-repeat left -96px;
+	cursor: pointer;
+	display: inline-block;
+	height: 18px;
+	width: 18px;
+}
+
+.ac_locked
+{
+	background-color: #dcdcdc;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+.ui-autocomplete-loading
+{
+	background: white url('images/spinner.gif') right center no-repeat;
+}
+
+.ui-autocomplete
+{
+	max-height: 200px;
+	overflow-y: auto; /* prevent horizontal scrollbar */
+	overflow-x: hidden; /* add padding to account for vertical scrollbar */
+	padding-right: 10px;
+	max-width: 600px;
+    z-index:9999 !important;
+}
+/* IE 6 doesn't support max-height
+	 * we use height instead, but this forces the menu to always be this tall
+	 */
+* html .ui-autocomplete
+{
+	height: 200px;
+}
+.ui-autocomplete li
+{
+	border-bottom: 1px solid; /*#9DD8F2;*/
+}
+.ui-autocomplete li a
+{
+	color: #333;
+}
+.ui-autocomplete li:nth-child(2n)
+{
+	background-color: #EAF7B7;
+}
+
+.ui-widget-content a
+{
+	color: #326EA1;
+}
+
+/* End Auto Complete */
+
+
+
+
+
+/*
+
+	jQuery Bubble Popup v.2.3.1
+	http://maxvergelli.wordpress.com/jquery-bubble-popup/
+	
+	Copyright (c) 2010 Max Vergelli
+	
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+	
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
+
+*/
+
+/* Layout Settings */
+.jquerybubblepopup
+{
+	width: auto;
+	height: auto;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	border: 0px;
+	z-index: 100;
+	text-align: center;
+	background-color: transparent;
+}
+.jquerybubblepopup-ie
+{
+	filter: progid:DXImageTransform.Microsoft.Shadow(color="#666666", Direction=135, Strength=3);
+}
+/* the plugin adds this class only if browser is IE; if IE9, it's added to main <DIV> else to <TABLE> */
+.jquerybubblepopup table
+{
+	width: auto;
+	height: auto;
+	margin: 0px;
+	padding: 0px;
+	display: table;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	border: 0px;
+	empty-cells: show;
+	background-color: transparent;
+}
+.jquerybubblepopup tbody
+{
+	display: table-row-group;
+	vertical-align: middle;
+	border: 0px;
+	background-color: transparent;
+}
+.jquerybubblepopup td
+{
+	margin: 0px;
+	padding: 0px;
+	background-color: transparent;
+}
+.jquerybubblepopup-top-left, .jquerybubblepopup-top-right, .jquerybubblepopup-bottom-left, .jquerybubblepopup-bottom-right
+{
+	width: 21px;
+	height: 21px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+.jquerybubblepopup-top-middle, .jquerybubblepopup-bottom-middle
+{
+	overflow: hidden;
+	background-repeat: repeat-x;
+}
+.jquerybubblepopup-middle-left, .jquerybubblepopup-middle-right
+{
+	overflow: hidden;
+	background-repeat: repeat-y;
+}
+.jquerybubblepopup-tail
+{
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+}
+
+/*  
+	Themes:
+
+	The plugin adds the class of the theme (for example ".jquerybubblepopup-azure") 
+	to the main <DIV> container, then you can edit the style of any element inside the 
+	Bubble Popup markup for each theme.
+	
+	The following code defines fonts and backgrounds of the "innerHtml" for each theme:
+*/
+.jquerybubblepopup-azure .jquerybubblepopup-innerHtml, .jquerybubblepopup-black .jquerybubblepopup-innerHtml, .jquerybubblepopup-blue .jquerybubblepopup-innerHtml, .jquerybubblepopup-green .jquerybubblepopup-innerHtml, .jquerybubblepopup-grey .jquerybubblepopup-innerHtml, .jquerybubblepopup-orange .jquerybubblepopup-innerHtml, .jquerybubblepopup-violet .jquerybubblepopup-innerHtml, .jquerybubblepopup-yellow .jquerybubblepopup-innerHtml
+{
+	font-family: Tahoma,Arial;
+	font-size: 13px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.jquerybubblepopup-all-azure .jquerybubblepopup-innerHtml, .jquerybubblepopup-all-black .jquerybubblepopup-innerHtml, .jquerybubblepopup-all-blue .jquerybubblepopup-innerHtml, .jquerybubblepopup-all-green .jquerybubblepopup-innerHtml, .jquerybubblepopup-all-grey .jquerybubblepopup-innerHtml, .jquerybubblepopup-all-orange .jquerybubblepopup-innerHtml, .jquerybubblepopup-all-violet .jquerybubblepopup-innerHtml, .jquerybubblepopup-all-yellow .jquerybubblepopup-innerHtml
+{
+	font-family: Tahoma,Arial;
+	font-size: 13px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+.jquerybubblepopup-all-azure .jquerybubblepopup-innerHtml
+{
+	background-color: #0099FF;
+}
+.jquerybubblepopup-all-black .jquerybubblepopup-innerHtml
+{
+	background-color: #000000;
+}
+.jquerybubblepopup-all-blue .jquerybubblepopup-innerHtml
+{
+	background-color: #0066CC;
+}
+.jquerybubblepopup-all-green .jquerybubblepopup-innerHtml
+{
+	background-color: #66FF00;
+}
+.jquerybubblepopup-all-grey .jquerybubblepopup-innerHtml
+{
+	background-color: #666666;
+}
+.jquerybubblepopup-all-orange .jquerybubblepopup-innerHtml
+{
+	background-color: #FF9933;
+}
+.jquerybubblepopup-all-violet .jquerybubblepopup-innerHtml
+{
+	background-color: #FF33FF;
+}
+.jquerybubblepopup-all-yellow .jquerybubblepopup-innerHtml
+{
+	background-color: #FFCC00;
+}
+
+
+#tooltip
+{
+	padding: 5px;
+	border: 1px solid rgb(17, 17, 17);
+	position: absolute;
+	z-index: 3000;
+	opacity: 0.85;
+	background-color: rgb(238, 238, 238);
+}
+#tooltip h3
+{
+	margin: 0px;
+}
+#tooltip div
+{
+	margin: 0px;
+}

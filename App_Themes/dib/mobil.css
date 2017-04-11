@@ -1,0 +1,371 @@
+﻿.fixed-dialog {
+    position: fixed;
+    top: 50px;
+}
+
+
+
+
+@media (max-width:480px) {
+
+    #aboneodemeleri {
+        font-size: 7px;
+        font-weight: bold;
+    }
+
+    #aboneodemeleribaslik {
+        height: 30px;
+    }
+
+    #sonodemetarihi {
+        display: none;
+    }
+
+    #sonodemeveri {
+        display: none;
+    }
+
+    .demo-placeholder {
+        margin-top: -35px !important;
+    }
+
+    .fixed-dialog-yonlendir {
+        position: fixed;
+        top: 100px;
+        left: 40px;
+    }
+
+    .tahliyeMargin{
+        margin: 0 auto;
+    }
+
+    #ContentPlaceHolder1_pnlMobilDogrulama {
+        font-size: 12px;
+        overflow: hidden;
+        overflow-x: hidden;
+        padding: 20px;
+    }
+
+    .h3, h3 {
+        font-size: 21px;
+    }
+
+    .btn-default {
+        font-size: 9px;
+    }
+
+    .navbar-collapse {
+        font-size: 13px;
+    }
+
+    #tahliyebasvuruform1, #serbesttuketicikisiselbilgiler, #mesajbilgileri, #abonebilgileri .form-control {
+        height: 27px;
+        width: 200px;
+    }
+
+    #bilgiguncellemetablo {
+        font-size: 12px;
+    }
+
+        #bilgiguncellemetablo .form-control {
+            height: 30px;
+            width: 180px;
+        }
+
+
+    .panel-title .form-control {
+        height: 25px;
+        width: 200px;
+    }
+
+
+    #ContentPlaceHolder1_txtDonemYil {
+        width: 50%;
+        float: left;
+    }
+
+    #ContentPlaceHolder1_txtDonemAy {
+        width: 50%;
+    }
+
+    #sorguturu, #sorgulamasekli, #popupsaymanlik, #bosluk {
+        display: none;
+    }
+
+    #popupkucult {
+        margin: auto;
+        left: 0;
+        width: 100px;
+        border: 1px solid #808080;
+    }
+
+    #aramaTuru {
+        display: none;
+    }
+
+
+    #ContentPlaceHolder1_grdOAAbonelikSorguSonuc {
+        font-size: 7px;
+    }
+
+    .linkbutton {
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px dotted #788CB0;
+    }
+
+    .table {
+        font-size: 8px;
+    }
+
+    .anasayfapopup {
+        width: 180px;
+        height: 210px;
+    }
+
+    .ui-datepicker {
+        z-index: 999999999999999999 !important;
+    }
+
+    #uzunbuton1, #uzunbuton2, #uzunbuton3 {
+        width: 289.5px !important;
+        border-radius: 0 !important;
+        margin-left: -0.5px;
+    }
+
+    #kisabuton1, #kisabuton2, #kisabuton3, #kisabuton4 {
+        width: 145px !important;
+        border-radius: 0 !important;
+        margin-left: -0.5px;
+    }
+
+    #ContentPlaceHolder1_txtDonemYil {
+        width: 48%;
+    }
+
+    #ContentPlaceHolder1_txtDonemAy {
+        width: 41%;
+        float: left;
+    }
+
+    #ContentPlaceHolder1_UCKrediKarti_ddlGecerlilikYil {
+        width: 78px;
+        float: left;
+        margin-right: 2px;
+    }
+
+    #ContentPlaceHolder1_UCKrediKarti_ddlGecerlilikAy {
+        width: 78px;
+        float: left;
+    }
+
+    #slash {
+        float: left;
+        font-size: 15px !important;
+        margin-left: 1px;
+    }
+
+    #cizgi {
+        float: left;
+        font-size: 25px;
+        padding: 2px;
+        margin-right: 4px;
+        width: 6%;
+    }
+
+    #onlineodemealert1 {
+        font-size: 11px;
+    }
+
+    #maksimum, #bonus, #world {
+        width: 30%;
+        height: 30%;
+    }
+
+
+    #ContentPlaceHolder1_grdAboneSahislar {
+        font-size: 6.6px;
+    }
+
+    #tesisatlarım {
+        margin-left: -10px;
+    }
+
+    #guvenceiadetable {
+        font-size: 13px;
+    }
+
+
+    #ContentPlaceHolder1_btnMobilOnayKoduDogrula, #ContentPlaceHolder1_btnMobilOnayKoduYenidenGonder {
+        padding: 3px;
+        font-size: 14px;
+    }
+
+    #ContentPlaceHolder1_grdSorguSonuc {
+        margin-left: -3px;
+        font-size: 7px;
+    }
+
+    #ContentPlaceHolder1_grdTahliyeVGuvenceIade {
+        font-size: 8px;
+    }
+
+    #ContentPlaceHolder1_btnAboneBasvuruKontrolGeri, #ContentPlaceHolder1_btnAboneBilgiGeri {
+        font-size: 14px;
+    }
+
+    #abonelikbasvuruonay {
+        font-size: 10px !important;
+    }
+
+    #ContentPlaceHolder1_divSerbestTuketici {
+        display: none;
+    }
+
+
+    #ContentPlaceHolder1_UCKrediKarti_ddlGecerlilikYil {
+        max-width: 50% !important;
+        float: left !important;
+    }
+
+    #ContentPlaceHolder1_UCKrediKarti_ddlGecerlilikAy {
+        max-width: 40% !important;
+        float: left !important;
+    }
+
+    #ContentPlaceHolder1_btnTahakkukGeri, #ContentPlaceHolder1_btnOdemeGeri, #ContentPlaceHolder1_btnTarifeGeri, #ContentPlaceHolder1_btnAboneBilgileriGeri {
+        font-size: 14px !important;
+    }
+
+    #visamaster {
+        width: 70px;
+        height: 18px;
+    }
+
+
+    #ContentPlaceHolder1_UCIsletmeSorgula_txtIlBolgeKodu, #ContentPlaceHolder1_UCIsletmeSorgula_txtIlceKodu, #ContentPlaceHolder1_UCIsletmeSorgula_txtKasabaKodu, #ContentPlaceHolder1_UCIsletmeSorgula_txtKoyKodu {
+        font-size: 12px;
+        width: 42px !important;
+    }
+
+    #ContentPlaceHolder1_UCIsletmeSorgula_txtIlKodu {
+        font-size: 12px;
+        width: 50px !important;
+    }
+
+    .footer {
+        z-index: 99999999999999 !important;
+    }
+
+    #girismesaj {
+        margin-bottom: -5px;
+        margin-top: -5px;
+    }
+
+}
+
+@media (min-width:485px) {
+
+    #aboneodemeleribaslik {
+        height: 45px;
+        font-weight: bold;
+    }
+
+    .footer {
+        z-index: 99999999999999 !important;
+    }
+
+    .ui-dialog {
+        max-width: 800px;
+    }
+
+    .fixed-dialog-yonlendir {
+        position: fixed;
+        top: 30% !important;
+        left: 40% !important;
+    }
+
+
+    #uzunbuton1, #uzunbuton2, #uzunbuton3 {
+        width: 279.8px !important;
+        border-radius: 0 !important;
+    }
+
+    #kisabuton1, #kisabuton2, #kisabuton3, #kisabuton4 {
+        width: 210px !important;
+        border-radius: 0 !important;
+    }
+
+    #uzunbuton1 {
+        margin-left: -0.1px;
+    }
+
+    #ContentPlaceHolder1_txtDonemYil {
+        width: 20%;
+        float: left;
+        margin-right: 5px;
+    }
+
+    #ContentPlaceHolder1_txtDonemAy {
+        width: 10%;
+        float: left;
+        margin-right: 11px;
+    }
+
+    #cizgi {
+        float: left;
+        font-size: 25px;
+        text-align: center;
+        margin-right: 2px;
+        width: 4%;
+    }
+
+    #ContentPlaceHolder1_UCKrediKarti_ddlGecerlilikYil {
+        max-width: 120px !important;
+        float: left !important;
+    }
+
+    #ContentPlaceHolder1_UCKrediKarti_ddlGecerlilikAy {
+        max-width: 100px !important;
+        float: left !important;
+    }
+
+    #slash {
+        float: left;
+        font-size: 18px !important;
+        margin-left: 3px;
+    }
+
+    #ContentPlaceHolder1_UCKrediKarti_btnOdeme {
+        margin-left: -310px;
+    }
+
+    #odemeresim {
+        margin-left: -100px;
+    }
+
+    #ContentPlaceHolder1_txtUyrukNo {
+        max-width: 263px;
+    }
+
+    #ContentPlaceHolder1_txtGsm {
+        min-width: 150px;
+    }
+
+    #girismesaj {
+        margin-left: -150px;
+    }
+
+
+    #ContentPlaceHolder1_UCIsletmeSorgula_txtIlBolgeKodu, #ContentPlaceHolder1_UCIsletmeSorgula_txtIlceKodu, #ContentPlaceHolder1_UCIsletmeSorgula_txtKasabaKodu, #ContentPlaceHolder1_UCIsletmeSorgula_txtKoyKodu {
+        font-size: 12px;
+        width: 50px !important;
+    }
+
+    #ContentPlaceHolder1_UCIsletmeSorgula_txtIlKodu {
+        font-size: 12px;
+        width: 60px !important;
+    }
+}
+
+

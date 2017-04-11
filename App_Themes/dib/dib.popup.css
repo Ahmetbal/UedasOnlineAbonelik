@@ -1,0 +1,18 @@
+﻿@import url("common.css");
+@import url("grid.css");
+@import url("ui/ui.css"); /*jquery ui*/
+@import url("ui/ui.dropdownchecklist.css"); /*jquery ui.dropdownchecklist*/
+@import url("master.popup.css");
+@import url("jqueryplugins.css");
+@import url("ui/ui.datetimepicker.css"); /*jquery ui.datetimepicker*/
+@import url("jquerymultiselect/jquery.multiselect.css");
+@import url("jquerymultiselect/jquery.multiselect.filter.css");
+
+#ctl00_up1 {
+    width: 100% !important;
+    margin: 0 auto;
+}
+
+body {
+    min-width: 500px !important;
+}

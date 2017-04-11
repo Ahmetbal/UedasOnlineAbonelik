@@ -1,0 +1,107 @@
+﻿div#login {
+    margin: 24px auto;
+    width: 300px;
+}
+
+#login .input {
+    font-size: 1.8em;
+    margin-top: 3px;
+    width: 92%;
+    background: #fff url(images/icons.png) no-repeat 5px -257px;
+    padding-left: 25px;
+    border: 1px solid #ccc;
+}
+
+#login .password {
+    background: #fff url(images/icons.png) no-repeat 5px -354px;
+}
+
+#login p label {
+    font-size: 11px;
+}
+
+#login #submit {
+    margin: 0;
+    font-size: 15px;
+}
+
+
+#navigation_login {
+    background: #FFFFFF url(images/nav.jpg) repeat-x scroll left top;
+    height: 60px;
+    width: 100%;
+    margin: 0px;
+}
+
+#steps {
+}
+
+    #steps li {
+        float: left;
+        height: 59px;
+        margin-left: 12px;
+        
+    }
+
+        #steps li a {
+            font-family: Tahoma, Arial, Verdana, sans-serif;
+            display: block;
+            color: #999;
+            font-size: 12px;
+            padding: 20px 6px 24px 52px;
+            width: 100px;
+        }
+
+            #steps li a:hover {
+                color: #326EA1;
+                text-decoration: none;
+                background-position: 0 -80px !important;
+            }
+
+            #steps li a.login {
+                background: transparent url(images/login.jpg) no-repeat 0 -8px;
+            }
+
+            #steps li a.register {
+                background: transparent url(images/register.jpg) no-repeat 0 -10px;
+            }
+
+            #steps li a.password {
+                background: transparent url(images/forgot.jpg) no-repeat 0 -10px;
+            }
+
+            #steps li a.login:hover {
+                color: #326EA1;
+                text-decoration: none;
+                background-position: 0 -81px !important;
+            }
+
+            #steps li a.register:hover {
+                color: #326EA1;
+                text-decoration: none;
+                background-position: 0 -81px !important;
+            }
+
+            #steps li a.password:hover {
+                color: #326EA1;
+                text-decoration: none;
+                background-position: 0 -81px !important;
+            }
+
+            #steps li a.active {
+                color: #000;
+                background-position: 0 -81px;
+            }
+
+            #steps li a.passive {
+                color: #aaa;
+                background-position: 0 -144px;
+            }
+
+            #login .inputYeniKullanici {
+    font-size: 1.8em;
+    margin:5px 0 5px 0;
+    width: 92%;
+    padding-left: 5px;
+    border: 1px solid #ccc;
+}
