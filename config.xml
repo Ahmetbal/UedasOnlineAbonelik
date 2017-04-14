@@ -107,9 +107,6 @@
 	<icon src="icon-120.png" width="120" height="120" gap:platform="ios" />
 	<icon src="icon-152.png" width="152" height="152" gap:platform="ios" />
 
-
-
-
     <icon src="icon-64.png"          gap:platform="webos" />
     <icon src="ricon-48.png"  gap:platform="winphone" />
     <icon src="icon-173.png" gap:platform="winphone"   gap:role="background" />
