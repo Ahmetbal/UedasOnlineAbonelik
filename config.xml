@@ -42,9 +42,7 @@
     <preference name="android-windowSoftInputMode" value="adjustResize" />
 
     <preference name="phonegap-version"       value="cli-5.2.0" />
-    <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="StatusBarBackgroundColor" value="#165769" /> <!--Your color value will go here-->
-    <preference name="StatusBarStyle" value="lightcontent" />
+
 
    <!--
         Define a specific version of PhoneGap to build into your app.
