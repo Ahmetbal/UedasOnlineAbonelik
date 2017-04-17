@@ -74,9 +74,9 @@
     <gap:plugin name="org.apache.cordova.vibration" />
 	-->
 
-<plugin name="cordova-plugin-whitelist" spec="1.3.2" />
-<plugin name="org.apache.cordova.splashscreen" spec="4.0.2" />
-<plugin name="org.apache.cordova.statusbar" spec="2.2.2" />
+<plugin name="cordova-plugin-whitelist" />
+<plugin name="org.apache.cordova.splashscreen" />
+<plugin name="org.apache.cordova.statusbar" />
 
 
 
