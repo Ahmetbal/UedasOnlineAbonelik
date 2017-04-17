@@ -4,9 +4,9 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.infopark.uedasonlineabonelik"
-        version   = "1.0.2">
+        version   = "1.0.6">
 
-    <name>CLK Uludağ Mobil İşlemler</name>
+    <name>Limak Enerji Uludağ Elektrik Mobil İşlemler</name>
 
 
     <description>
@@ -76,7 +76,7 @@
   <plugin name="org.apache.cordova.splashscreen" spec="4.0.2" />
   <plugin name="org.apache.cordova.statusbar" spec="2.2.2" />
 
-  
+
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <!--
