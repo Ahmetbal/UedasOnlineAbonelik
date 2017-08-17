@@ -72,8 +72,8 @@
 	-->
 
 
-  <plugin name="cordova-plugin-whitelist" spec="1.3.2" />
-  <!-- <plugin name="org.apache.cordova.splashscreen" spec="4.0.2" /> 
+  <!--<plugin name="cordova-plugin-whitelist" spec="1.3.2" />
+   <plugin name="org.apache.cordova.splashscreen" spec="4.0.2" /> 
 <plugin name="org.apache.cordova.statusbar" /> -->
 	
 	
