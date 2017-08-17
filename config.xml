@@ -129,6 +129,8 @@
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
 -->
+	
+	<preference name="SplashScreenDelay" value="3000" />
     <splash src="clk-bogazici-logo-32.png" width="320" height="480"/>
     <splash src="clk-bogazici-logo-32.png" width="640" height="960"/>
     <splash src="clk-bogazici-logo-32.png" width="768" height="1024"/>
@@ -157,7 +159,6 @@
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
 
-<plugin name="cordova-plugin-splashscreen" />
 <plugin name="org.apache.cordova.statusbar" />
 
     <allow-intent href="http://*/*" />
