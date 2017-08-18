@@ -134,7 +134,7 @@
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
 -->
-	
+	<preference name="SplashScreenDelay" value="5000" />
     <gap:splash src="clk-uludag-logo-32.png"       gap:platform="android" gap:qualifier="port-ldpi" />
     <gap:splash src="clk-uludag-logo-32.png"       gap:platform="android" gap:qualifier="port-mdpi" />
     <gap:splash src="clk-uludag-logo-32.png"       gap:platform="android" gap:qualifier="port-hdpi" />
