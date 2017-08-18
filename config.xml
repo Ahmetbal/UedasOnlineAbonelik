@@ -134,6 +134,19 @@
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg"      gap:platform="winphone" />
 -->
+	
+    <gap:splash src="clk-uludag-logo-32.png"       gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="clk-uludag-logo-32.png"       gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="clk-uludag-logo-32.png"       gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="clk-uludag-logo-32.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
+    <gap:splash src="clk-uludag-logo-32.png"              gap:platform="blackberry" />
+    <gap:splash src="clk-uludag-logo-32.png"         gap:platform="ios"      />
+    <gap:splash src="clk-uludag-logo-32.png"      gap:platform="ios"      />
+    <gap:splash src="clk-uludag-logo-32.png" gap:platform="ios"      />
+    <gap:splash src="clk-uludag-logo-32.png"           gap:platform="ios"     />
+    <gap:splash src="clk-uludag-logo-32.png"          gap:platform="ios"      />
+    <gap:splash src="clk-uludag-logo-32.png"      gap:platform="winphone" />
+	
 
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
