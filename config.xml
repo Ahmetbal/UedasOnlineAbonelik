@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.infopark.uedasonlineabonelik"
-        version   = "1.0.8">
+        version   = "1.0.9">
 
     <name>Limak Enerji Uludağ Elektrik Mobil İşlemler</name>
 
@@ -150,7 +150,7 @@
 
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-    <string>108</string>
+    <string>109</string>
     </gap:config-file>
 
 
